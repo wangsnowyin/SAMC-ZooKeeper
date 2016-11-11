@@ -1,0 +1,149 @@
+2016-06-01 16:47:04,908 [myid:] - INFO  [main:TestRunner@?] - State exploration strategy is edu.uchicago.cs.ucare.samc.server.RandomModelChecker
+2016-06-01 16:47:04,951 [myid:] - DEBUG [main:ModelCheckingServerAbstract@?] - Test reset
+2016-06-01 16:47:05,456 [myid:] - INFO  [main:ModelCheckingServerAbstract@?] - This test has id = 1
+2016-06-01 16:47:05,518 [myid:] - DEBUG [main:LeaderElectionEnsembleController@?] - Starting ensemble
+2016-06-01 16:47:05,518 [myid:] - DEBUG [main:LeaderElectionEnsembleController@?] - Starting node 0
+2016-06-01 16:47:05,721 [myid:] - DEBUG [main:LeaderElectionEnsembleController@?] - Starting node 1
+2016-06-01 16:47:05,925 [myid:] - DEBUG [main:LeaderElectionEnsembleController@?] - Reconfig node 1
+2016-06-01 16:47:05,930 [myid:] - DEBUG [main:LeaderElectionEnsembleController@?] - Starting node 2
+2016-06-01 16:47:06,140 [myid:] - DEBUG [main:LeaderElectionEnsembleController@?] - Reconfig node 2
+2016-06-01 16:47:06,145 [myid:] - INFO  [main:ModelCheckingServerAbstract@?] - Starts wait on first steady states
+2016-06-01 16:47:06,374 [myid:] - INFO  [Thread-3:ModelCheckingServerAbstract@?] - Intercept packet Event={zxid=77309411333, eventId=7141, leader=0, peerEpoch=18, sourceNode=0, zkEventId=2380, sendRole=0, electionEpoch=1, destinationNode=0}
+2016-06-01 16:47:07,155 [myid:] - INFO  [Thread-3:ModelCheckingServerAbstract@?] - Intercept packet Event={zxid=77309411333, eventId=7180, leader=1, peerEpoch=18, sourceNode=1, zkEventId=2393, sendRole=0, electionEpoch=1, destinationNode=0}
+2016-06-01 16:47:07,426 [myid:] - INFO  [Thread-3:ModelCheckingServerAbstract@?] - Intercept packet Event={zxid=77309411333, eventId=7219, leader=2, peerEpoch=18, sourceNode=2, zkEventId=2406, sendRole=0, electionEpoch=1, destinationNode=0}
+2016-06-01 16:47:11,150 [myid:] - DEBUG [main:ModelCheckingServerAbstract@?] - Node 0 is in steady state
+2016-06-01 16:47:11,151 [myid:] - DEBUG [main:ModelCheckingServerAbstract@?] - Node 1 is in steady state
+2016-06-01 16:47:11,151 [myid:] - DEBUG [main:ModelCheckingServerAbstract@?] - Node 2 is in steady state
+2016-06-01 16:47:11,151 [myid:] - DEBUG [main:ModelCheckingServerAbstract@?] - System update its global state to be 29791
+2016-06-01 16:47:11,152 [myid:] - INFO  [main:ModelCheckingServerAbstract@?] - First system steady state, start model checker thread
+2016-06-01 16:47:11,164 [myid:] - DEBUG [Thread-2:ModelCheckingServerAbstract@?] - Ack waiting for packet id 7219
+2016-06-01 16:47:11,207 [myid:] - INFO  [Thread-3:ModelCheckingServerAbstract@?] - Intercept packet Event={zxid=77309411333, eventId=7726, leader=2, peerEpoch=18, sourceNode=2, zkEventId=2575, sendRole=0, electionEpoch=1, destinationNode=1}
+2016-06-01 16:47:12,166 [myid:] - WARN  [Thread-2:ModelCheckingServerAbstract@?] - No ack for packet 7219
+2016-06-01 16:47:12,166 [myid:] - DEBUG [Thread-2:ModelCheckingServerAbstract@?] - Waiting node 0 to be in steady state
+2016-06-01 16:47:12,166 [myid:] - DEBUG [Thread-2:ModelCheckingServerAbstract@?] - System update its global state to be 29791
+2016-06-01 16:47:12,173 [myid:] - DEBUG [Thread-2:ModelCheckingServerAbstract@?] - Ack waiting for packet id 7180
+2016-06-01 16:47:12,212 [myid:] - INFO  [Thread-3:ModelCheckingServerAbstract@?] - Intercept packet Event={zxid=77309411333, eventId=7687, leader=1, peerEpoch=18, sourceNode=1, zkEventId=2562, sendRole=0, electionEpoch=1, destinationNode=1}
+2016-06-01 16:47:13,179 [myid:] - WARN  [Thread-2:ModelCheckingServerAbstract@?] - No ack for packet 7180
+2016-06-01 16:47:13,179 [myid:] - DEBUG [Thread-2:ModelCheckingServerAbstract@?] - Waiting node 0 to be in steady state
+2016-06-01 16:47:13,179 [myid:] - DEBUG [Thread-2:ModelCheckingServerAbstract@?] - System update its global state to be 29791
+2016-06-01 16:47:13,186 [myid:] - DEBUG [Thread-2:ModelCheckingServerAbstract@?] - Ack waiting for packet id 7687
+2016-06-01 16:47:14,188 [myid:] - WARN  [Thread-2:ModelCheckingServerAbstract@?] - No ack for packet 7687
+2016-06-01 16:47:14,188 [myid:] - DEBUG [Thread-2:ModelCheckingServerAbstract@?] - Waiting node 1 to be in steady state
+2016-06-01 16:47:14,189 [myid:] - DEBUG [Thread-2:ModelCheckingServerAbstract@?] - System update its global state to be 29791
+2016-06-01 16:47:14,194 [myid:] - DEBUG [Thread-2:ModelCheckingServerAbstract@?] - Ack waiting for packet id 7726
+2016-06-01 16:47:14,230 [myid:] - INFO  [Thread-3:ModelCheckingServerAbstract@?] - Intercept packet Event={zxid=77309411333, eventId=8194, leader=1, peerEpoch=18, sourceNode=1, zkEventId=2731, sendRole=0, electionEpoch=1, destinationNode=2}
+2016-06-01 16:47:14,235 [myid:] - INFO  [Thread-3:ModelCheckingServerAbstract@?] - Intercept packet Event={zxid=77309411333, eventId=8233, leader=2, peerEpoch=18, sourceNode=2, zkEventId=2744, sendRole=0, electionEpoch=1, destinationNode=2}
+2016-06-01 16:47:15,200 [myid:] - WARN  [Thread-2:ModelCheckingServerAbstract@?] - No ack for packet 7726
+2016-06-01 16:47:15,200 [myid:] - DEBUG [Thread-2:ModelCheckingServerAbstract@?] - Waiting node 1 to be in steady state
+2016-06-01 16:47:15,200 [myid:] - DEBUG [Thread-2:ModelCheckingServerAbstract@?] - System update its global state to be 29791
+2016-06-01 16:47:15,207 [myid:] - DEBUG [Thread-2:ModelCheckingServerAbstract@?] - Ack waiting for packet id 8233
+2016-06-01 16:47:15,230 [myid:] - INFO  [Thread-3:ModelCheckingServerAbstract@?] - Intercept packet Event={zxid=77309411333, eventId=7222, leader=2, peerEpoch=18, sourceNode=2, zkEventId=2407, sendRole=0, electionEpoch=1, destinationNode=0}
+2016-06-01 16:47:16,208 [myid:] - WARN  [Thread-2:ModelCheckingServerAbstract@?] - No ack for packet 8233
+2016-06-01 16:47:16,208 [myid:] - DEBUG [Thread-2:ModelCheckingServerAbstract@?] - Waiting node 2 to be in steady state
+2016-06-01 16:47:16,208 [myid:] - DEBUG [Thread-2:ModelCheckingServerAbstract@?] - System update its global state to be 29791
+2016-06-01 16:47:16,215 [myid:] - DEBUG [Thread-2:ModelCheckingServerAbstract@?] - Ack waiting for packet id 8194
+2016-06-01 16:47:16,409 [myid:] - INFO  [Thread-3:ModelCheckingServerAbstract@?] - Intercept packet Event={zxid=77309411333, eventId=7183, leader=1, peerEpoch=18, sourceNode=1, zkEventId=2394, sendRole=0, electionEpoch=1, destinationNode=0}
+2016-06-01 16:47:17,220 [myid:] - WARN  [Thread-2:ModelCheckingServerAbstract@?] - No ack for packet 8194
+2016-06-01 16:47:17,220 [myid:] - DEBUG [Thread-2:ModelCheckingServerAbstract@?] - Waiting node 2 to be in steady state
+2016-06-01 16:47:17,221 [myid:] - DEBUG [Thread-2:ModelCheckingServerAbstract@?] - System update its global state to be 29791
+2016-06-01 16:47:17,231 [myid:] - DEBUG [Thread-2:ModelCheckingServerAbstract@?] - Ack waiting for packet id 7141
+2016-06-01 16:47:17,253 [myid:] - INFO  [Thread-3:ModelCheckingServerAbstract@?] - Intercept packet Event={zxid=77309411333, eventId=8155, leader=0, peerEpoch=18, sourceNode=0, zkEventId=2718, sendRole=0, electionEpoch=1, destinationNode=2}
+2016-06-01 16:47:18,172 [myid:] - INFO  [Thread-3:ModelCheckingServerAbstract@?] - Intercept packet Event={eventId=6595, sourceNode=0, zkEventId=2198, destinationNode=0}
+2016-06-01 16:47:18,231 [myid:] - WARN  [Thread-2:ModelCheckingServerAbstract@?] - No ack for packet 7141
+2016-06-01 16:47:18,232 [myid:] - DEBUG [Thread-2:ModelCheckingServerAbstract@?] - Waiting node 0 to be in steady state
+2016-06-01 16:47:18,232 [myid:] - DEBUG [Thread-2:ModelCheckingServerAbstract@?] - System update its global state to be 29791
+2016-06-01 16:47:18,245 [myid:] - DEBUG [Thread-2:ModelCheckingServerAbstract@?] - Ack waiting for packet id 8155
+2016-06-01 16:47:18,314 [myid:] - INFO  [Thread-3:ModelCheckingServerAbstract@?] - Intercept packet Event={zxid=77309411333, eventId=7648, leader=0, peerEpoch=18, sourceNode=0, zkEventId=2549, sendRole=0, electionEpoch=1, destinationNode=1}
+2016-06-01 16:47:18,607 [myid:] - INFO  [Thread-3:ModelCheckingServerAbstract@?] - Intercept packet Event={eventId=6596, sourceNode=0, zkEventId=2198, destinationNode=0}
+2016-06-01 16:47:19,246 [myid:] - WARN  [Thread-2:ModelCheckingServerAbstract@?] - No ack for packet 8155
+2016-06-01 16:47:19,246 [myid:] - DEBUG [Thread-2:ModelCheckingServerAbstract@?] - Waiting node 2 to be in steady state
+2016-06-01 16:47:19,246 [myid:] - DEBUG [Thread-2:ModelCheckingServerAbstract@?] - System update its global state to be 29791
+2016-06-01 16:47:19,254 [myid:] - DEBUG [Thread-2:ModelCheckingServerAbstract@?] - Ack waiting for packet id 7183
+2016-06-01 16:47:19,294 [myid:] - INFO  [Thread-3:ModelCheckingServerAbstract@?] - Intercept packet Event={zxid=77309411333, eventId=7690, leader=1, peerEpoch=18, sourceNode=1, zkEventId=2563, sendRole=0, electionEpoch=1, destinationNode=1}
+2016-06-01 16:47:20,255 [myid:] - WARN  [Thread-2:ModelCheckingServerAbstract@?] - No ack for packet 7183
+2016-06-01 16:47:20,255 [myid:] - DEBUG [Thread-2:ModelCheckingServerAbstract@?] - Waiting node 0 to be in steady state
+2016-06-01 16:47:20,255 [myid:] - DEBUG [Thread-2:ModelCheckingServerAbstract@?] - System update its global state to be 29791
+2016-06-01 16:47:20,271 [myid:] - DEBUG [Thread-2:ModelCheckingServerAbstract@?] - Ack waiting for packet id 7648
+2016-06-01 16:47:20,309 [myid:] - INFO  [Thread-3:ModelCheckingServerAbstract@?] - Intercept packet Event={zxid=77309411333, eventId=7144, leader=0, peerEpoch=18, sourceNode=0, zkEventId=2381, sendRole=0, electionEpoch=1, destinationNode=0}
+2016-06-01 16:47:21,273 [myid:] - WARN  [Thread-2:ModelCheckingServerAbstract@?] - No ack for packet 7648
+2016-06-01 16:47:21,273 [myid:] - DEBUG [Thread-2:ModelCheckingServerAbstract@?] - Waiting node 1 to be in steady state
+2016-06-01 16:47:21,274 [myid:] - DEBUG [Thread-2:ModelCheckingServerAbstract@?] - System update its global state to be 29791
+2016-06-01 16:47:21,290 [myid:] - DEBUG [Thread-2:ModelCheckingServerAbstract@?] - Ack waiting for packet id 6595
+2016-06-01 16:47:22,290 [myid:] - WARN  [Thread-2:ModelCheckingServerAbstract@?] - No ack for packet 6595
+2016-06-01 16:47:22,291 [myid:] - DEBUG [Thread-2:ModelCheckingServerAbstract@?] - Waiting node 0 to be in steady state
+2016-06-01 16:47:22,291 [myid:] - DEBUG [Thread-2:ModelCheckingServerAbstract@?] - System update its global state to be 29791
+2016-06-01 16:47:22,298 [myid:] - DEBUG [Thread-2:ModelCheckingServerAbstract@?] - Ack waiting for packet id 7222
+2016-06-01 16:47:22,311 [myid:] - INFO  [Thread-3:ModelCheckingServerAbstract@?] - Intercept packet Event={zxid=77309411333, eventId=7729, leader=2, peerEpoch=18, sourceNode=2, zkEventId=2576, sendRole=0, electionEpoch=1, destinationNode=1}
+2016-06-01 16:47:23,298 [myid:] - WARN  [Thread-2:ModelCheckingServerAbstract@?] - No ack for packet 7222
+2016-06-01 16:47:23,299 [myid:] - DEBUG [Thread-2:ModelCheckingServerAbstract@?] - Waiting node 0 to be in steady state
+2016-06-01 16:47:23,299 [myid:] - DEBUG [Thread-2:ModelCheckingServerAbstract@?] - System update its global state to be 29791
+2016-06-01 16:47:23,305 [myid:] - DEBUG [Thread-2:ModelCheckingServerAbstract@?] - Ack waiting for packet id 7729
+2016-06-01 16:47:23,338 [myid:] - INFO  [Thread-3:ModelCheckingServerAbstract@?] - Intercept packet Event={zxid=77309411333, eventId=8236, leader=2, peerEpoch=18, sourceNode=2, zkEventId=2745, sendRole=0, electionEpoch=1, destinationNode=2}
+2016-06-01 16:47:24,306 [myid:] - WARN  [Thread-2:ModelCheckingServerAbstract@?] - No ack for packet 7729
+2016-06-01 16:47:24,306 [myid:] - DEBUG [Thread-2:ModelCheckingServerAbstract@?] - Waiting node 1 to be in steady state
+2016-06-01 16:47:24,306 [myid:] - DEBUG [Thread-2:ModelCheckingServerAbstract@?] - System update its global state to be 29791
+2016-06-01 16:47:24,318 [myid:] - DEBUG [Thread-2:ModelCheckingServerAbstract@?] - Ack waiting for packet id 6596
+2016-06-01 16:47:25,319 [myid:] - WARN  [Thread-2:ModelCheckingServerAbstract@?] - No ack for packet 6596
+2016-06-01 16:47:25,319 [myid:] - DEBUG [Thread-2:ModelCheckingServerAbstract@?] - Waiting node 0 to be in steady state
+2016-06-01 16:47:25,319 [myid:] - DEBUG [Thread-2:ModelCheckingServerAbstract@?] - System update its global state to be 29791
+2016-06-01 16:47:25,328 [myid:] - DEBUG [Thread-2:ModelCheckingServerAbstract@?] - Ack waiting for packet id 7690
+2016-06-01 16:47:25,364 [myid:] - INFO  [Thread-3:ModelCheckingServerAbstract@?] - Intercept packet Event={zxid=77309411333, eventId=8197, leader=1, peerEpoch=18, sourceNode=1, zkEventId=2732, sendRole=0, electionEpoch=1, destinationNode=2}
+2016-06-01 16:47:26,330 [myid:] - WARN  [Thread-2:ModelCheckingServerAbstract@?] - No ack for packet 7690
+2016-06-01 16:47:26,331 [myid:] - DEBUG [Thread-2:ModelCheckingServerAbstract@?] - Waiting node 1 to be in steady state
+2016-06-01 16:47:26,331 [myid:] - DEBUG [Thread-2:ModelCheckingServerAbstract@?] - System update its global state to be 29791
+2016-06-01 16:47:26,339 [myid:] - DEBUG [Thread-2:ModelCheckingServerAbstract@?] - Ack waiting for packet id 7144
+2016-06-01 16:47:26,371 [myid:] - INFO  [Thread-3:ModelCheckingServerAbstract@?] - Intercept packet Event={zxid=77309411333, eventId=7651, leader=0, peerEpoch=19, sourceNode=0, zkEventId=2550, sendRole=2, electionEpoch=1, destinationNode=1}
+2016-06-01 16:47:27,341 [myid:] - WARN  [Thread-2:ModelCheckingServerAbstract@?] - No ack for packet 7144
+2016-06-01 16:47:27,341 [myid:] - DEBUG [Thread-2:ModelCheckingServerAbstract@?] - Waiting node 0 to be in steady state
+2016-06-01 16:47:27,341 [myid:] - DEBUG [Thread-2:ModelCheckingServerAbstract@?] - System update its global state to be 29791
+2016-06-01 16:47:27,349 [myid:] - DEBUG [Thread-2:ModelCheckingServerAbstract@?] - Ack waiting for packet id 7651
+2016-06-01 16:47:27,372 [myid:] - INFO  [Thread-3:ModelCheckingServerAbstract@?] - Intercept packet Event={zxid=77309411333, eventId=8158, leader=0, peerEpoch=19, sourceNode=0, zkEventId=2719, sendRole=2, electionEpoch=1, destinationNode=2}
+2016-06-01 16:47:28,352 [myid:] - WARN  [Thread-2:ModelCheckingServerAbstract@?] - No ack for packet 7651
+2016-06-01 16:47:28,352 [myid:] - DEBUG [Thread-2:ModelCheckingServerAbstract@?] - Waiting node 1 to be in steady state
+2016-06-01 16:47:28,352 [myid:] - DEBUG [Thread-2:ModelCheckingServerAbstract@?] - System update its global state to be 29791
+2016-06-01 16:47:28,362 [myid:] - DEBUG [Thread-2:ModelCheckingServerAbstract@?] - Ack waiting for packet id 8236
+2016-06-01 16:47:28,393 [myid:] - INFO  [Thread-3:ModelCheckingServerAbstract@?] - Intercept packet Event={zxid=77309411333, eventId=7225, leader=2, peerEpoch=18, sourceNode=2, zkEventId=2408, sendRole=0, electionEpoch=1, destinationNode=0}
+2016-06-01 16:47:29,366 [myid:] - WARN  [Thread-2:ModelCheckingServerAbstract@?] - No ack for packet 8236
+2016-06-01 16:47:29,366 [myid:] - DEBUG [Thread-2:ModelCheckingServerAbstract@?] - Waiting node 2 to be in steady state
+2016-06-01 16:47:29,366 [myid:] - DEBUG [Thread-2:ModelCheckingServerAbstract@?] - System update its global state to be 29791
+2016-06-01 16:47:29,373 [myid:] - DEBUG [Thread-2:ModelCheckingServerAbstract@?] - Ack waiting for packet id 7225
+2016-06-01 16:47:29,383 [myid:] - INFO  [Thread-3:ModelCheckingServerAbstract@?] - Intercept packet Event={zxid=77309411333, eventId=7732, leader=2, peerEpoch=18, sourceNode=2, zkEventId=2577, sendRole=0, electionEpoch=1, destinationNode=1}
+2016-06-01 16:47:30,375 [myid:] - WARN  [Thread-2:ModelCheckingServerAbstract@?] - No ack for packet 7225
+2016-06-01 16:47:30,376 [myid:] - DEBUG [Thread-2:ModelCheckingServerAbstract@?] - Waiting node 0 to be in steady state
+2016-06-01 16:47:30,376 [myid:] - DEBUG [Thread-2:ModelCheckingServerAbstract@?] - System update its global state to be 29791
+2016-06-01 16:47:30,382 [myid:] - DEBUG [Thread-2:ModelCheckingServerAbstract@?] - Ack waiting for packet id 7732
+2016-06-01 16:47:30,407 [myid:] - INFO  [Thread-3:ModelCheckingServerAbstract@?] - Intercept packet Event={zxid=77309411333, eventId=8239, leader=2, peerEpoch=18, sourceNode=2, zkEventId=2746, sendRole=0, electionEpoch=1, destinationNode=2}
+2016-06-01 16:47:31,386 [myid:] - WARN  [Thread-2:ModelCheckingServerAbstract@?] - No ack for packet 7732
+2016-06-01 16:47:31,386 [myid:] - DEBUG [Thread-2:ModelCheckingServerAbstract@?] - Waiting node 1 to be in steady state
+2016-06-01 16:47:31,386 [myid:] - DEBUG [Thread-2:ModelCheckingServerAbstract@?] - System update its global state to be 29791
+2016-06-01 16:47:31,396 [myid:] - DEBUG [Thread-2:ModelCheckingServerAbstract@?] - Ack waiting for packet id 8158
+2016-06-01 16:47:31,413 [myid:] - INFO  [Thread-3:ModelCheckingServerAbstract@?] - Intercept packet Event={zxid=77309411333, eventId=7147, leader=0, peerEpoch=19, sourceNode=0, zkEventId=2382, sendRole=2, electionEpoch=-1, destinationNode=0}
+2016-06-01 16:47:32,398 [myid:] - WARN  [Thread-2:ModelCheckingServerAbstract@?] - No ack for packet 8158
+2016-06-01 16:47:32,398 [myid:] - DEBUG [Thread-2:ModelCheckingServerAbstract@?] - Waiting node 2 to be in steady state
+2016-06-01 16:47:32,398 [myid:] - DEBUG [Thread-2:ModelCheckingServerAbstract@?] - System update its global state to be 29791
+2016-06-01 16:47:32,407 [myid:] - DEBUG [Thread-2:ModelCheckingServerAbstract@?] - Ack waiting for packet id 8239
+2016-06-01 16:47:33,408 [myid:] - WARN  [Thread-2:ModelCheckingServerAbstract@?] - No ack for packet 8239
+2016-06-01 16:47:33,409 [myid:] - DEBUG [Thread-2:ModelCheckingServerAbstract@?] - Waiting node 2 to be in steady state
+2016-06-01 16:47:33,409 [myid:] - DEBUG [Thread-2:ModelCheckingServerAbstract@?] - System update its global state to be 29791
+2016-06-01 16:47:33,417 [myid:] - DEBUG [Thread-2:ModelCheckingServerAbstract@?] - Ack waiting for packet id 7147
+2016-06-01 16:47:33,457 [myid:] - INFO  [Thread-3:ModelCheckingServerAbstract@?] - Intercept packet Event={zxid=77309411333, eventId=8161, leader=0, peerEpoch=19, sourceNode=0, zkEventId=2720, sendRole=2, electionEpoch=1, destinationNode=2}
+2016-06-01 16:47:34,421 [myid:] - WARN  [Thread-2:ModelCheckingServerAbstract@?] - No ack for packet 7147
+2016-06-01 16:47:34,421 [myid:] - DEBUG [Thread-2:ModelCheckingServerAbstract@?] - Waiting node 0 to be in steady state
+2016-06-01 16:47:34,421 [myid:] - DEBUG [Thread-2:ModelCheckingServerAbstract@?] - System update its global state to be 29791
+2016-06-01 16:47:34,429 [myid:] - DEBUG [Thread-2:ModelCheckingServerAbstract@?] - Ack waiting for packet id 8197
+2016-06-01 16:47:35,432 [myid:] - WARN  [Thread-2:ModelCheckingServerAbstract@?] - No ack for packet 8197
+2016-06-01 16:47:35,432 [myid:] - DEBUG [Thread-2:ModelCheckingServerAbstract@?] - Waiting node 2 to be in steady state
+2016-06-01 16:47:35,432 [myid:] - DEBUG [Thread-2:ModelCheckingServerAbstract@?] - System update its global state to be 29791
+2016-06-01 16:47:35,438 [myid:] - DEBUG [Thread-2:ModelCheckingServerAbstract@?] - Ack waiting for packet id 8161
+2016-06-01 16:47:36,441 [myid:] - WARN  [Thread-2:ModelCheckingServerAbstract@?] - No ack for packet 8161
+2016-06-01 16:47:36,441 [myid:] - DEBUG [Thread-2:ModelCheckingServerAbstract@?] - Waiting node 2 to be in steady state
+2016-06-01 16:47:36,442 [myid:] - DEBUG [Thread-2:ModelCheckingServerAbstract@?] - System update its global state to be 29791
+2016-06-01 16:47:36,455 [myid:] - DEBUG [Thread-4:LeaderElectionEnsembleController@?] - Stopping ensemble
+2016-06-01 16:47:36,455 [myid:] - DEBUG [Thread-4:LeaderElectionEnsembleController@?] - Stopping node 0
+2016-06-01 16:47:36,661 [myid:] - DEBUG [Thread-4:LeaderElectionEnsembleController@?] - Stopping node 1
+2016-06-01 16:47:36,867 [myid:] - DEBUG [Thread-4:LeaderElectionEnsembleController@?] - Stopping node 2
+2016-06-01 16:47:36,948 [myid:] - DEBUG [Thread-2:SqliteExploredBranchRecorder@?] - Marked /root/-1743774669/-1743774708/-1743774201/-1743774162/-1743773655/-1743773694/-1743774747/-1743773733/-1743774705/-1743774240/-1743775293/-1743774666/-1743774159/-1743775292/-1743774198/-1743774744/-1743774237/-1743773652/-1743774663/-1743774156/-1743773730/-1743773649/-1743774741/-1743773691/-1743773727 to be explored
+2016-06-01 16:47:36,948 [myid:] - INFO  [Thread-2:SqliteExploredBranchRecorder@?] - Marked /root/-1743774669/-1743774708/-1743774201/-1743774162/-1743773655/-1743773694/-1743774747/-1743773733/-1743774705/-1743774240/-1743775293/-1743774666/-1743774159/-1743775292/-1743774198/-1743774744/-1743774237/-1743773652/-1743774663/-1743774156/-1743773730/-1743773649/-1743774741/-1743773691/-1743773727 to be explored
+2016-06-01 16:47:36,950 [myid:] - DEBUG [Thread-2:ModelCheckingServerAbstract@?] - Test reset
+2016-06-01 16:47:36,952 [myid:] - DEBUG [main:LeaderElectionEnsembleController@?] - Stopping ensemble
+2016-06-01 16:47:36,952 [myid:] - DEBUG [main:LeaderElectionEnsembleController@?] - Stopping node 0

@@ -1,0 +1,230 @@
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/Users/wangsnowyin/Documents/zookeeper-3.5.1-alpha/build/lib/slf4j-log4j12-1.7.5.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/Users/wangsnowyin/Documents/zookeeper-3.5.1-alpha/lib/slf4j-log4j12-1.7.5.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/Users/wangsnowyin/Documents/samc/samc-zookeeper/lib/slf4j-log4j12-1.6.1.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.slf4j.impl.Log4jLoggerFactory]
+2016-06-01 16:47:06,879 [myid:] - INFO  [main:QuorumPeerConfig@109] - Reading configuration from: /Users/wangsnowyin/Documents/zookeeper-3.5.1-alpha/bin/../conf/zoo3.cfg
+2016-06-01 16:47:06,907 [myid:3] - INFO  [main:DatadirCleanupManager@78] - autopurge.snapRetainCount set to 3
+2016-06-01 16:47:06,907 [myid:3] - INFO  [main:DatadirCleanupManager@79] - autopurge.purgeInterval set to 0
+2016-06-01 16:47:06,907 [myid:3] - INFO  [main:DatadirCleanupManager@101] - Purge task is not scheduled.
+2016-06-01 16:47:06,936 [myid:3] - INFO  [main:QuorumPeerMain@136] - Starting quorum peer
+2016-06-01 16:47:06,953 [myid:3] - INFO  [main:NIOServerCnxnFactory@670] - Configuring NIO connection handler with 10s sessionless connection timeout, 1 selector thread(s), 8 worker threads, and 64 kB direct buffers.
+2016-06-01 16:47:07,008 [myid:3] - INFO  [main:NIOServerCnxnFactory@683] - binding to port /0.0.0.0:2283
+2016-06-01 16:47:07,087 [myid:3] - INFO  [main:Slf4jLog@67] - Logging to org.slf4j.impl.Log4jLoggerAdapter(org.mortbay.log) via org.mortbay.log.Slf4jLog
+2016-06-01 16:47:07,149 [myid:3] - INFO  [main:QuorumPeer@1243] - Local sessions disabled
+2016-06-01 16:47:07,149 [myid:3] - INFO  [main:QuorumPeer@1254] - Local session upgrading disabled
+2016-06-01 16:47:07,149 [myid:3] - INFO  [main:QuorumPeer@1223] - tickTime set to 5000
+2016-06-01 16:47:07,150 [myid:3] - INFO  [main:QuorumPeer@1265] - minSessionTimeout set to 10000
+2016-06-01 16:47:07,150 [myid:3] - INFO  [main:QuorumPeer@1276] - maxSessionTimeout set to 100000
+2016-06-01 16:47:07,150 [myid:3] - INFO  [main:QuorumPeer@1291] - initLimit set to 5
+2016-06-01 16:47:07,199 [myid:3] - INFO  [main:FileSnap@83] - Reading snapshot /Users/wangsnowyin/Documents/zookeeper-3.5.1-alpha/data/data3/version-2/snapshot.1200000002
+2016-06-01 16:47:07,240 [myid:3] - INFO  [main:Slf4jLog@67] - jetty-6.1.26
+2016-06-01 16:47:07,299 [myid:3] - WARN  [main:Slf4jLog@76] - failed SocketConnector@0.0.0.0:8080: java.net.BindException: Address already in use
+2016-06-01 16:47:07,300 [myid:3] - WARN  [main:Slf4jLog@76] - failed Server@3551a94: java.net.BindException: Address already in use
+2016-06-01 16:47:07,312 [myid:3] - WARN  [main:QuorumPeer@659] - Problem starting AdminServer
+org.apache.zookeeper.server.admin.AdminServer$AdminServerException: Problem starting AdminServer on port 8080, command URL /commands
+	at org.apache.zookeeper.server.admin.JettyAdminServer.start(JettyAdminServer.java:90)
+	at org.apache.zookeeper.server.quorum.QuorumPeer.start(QuorumPeer.java:657)
+	at org.apache.zookeeper.server.quorum.QuorumPeerMain.runFromConfig(QuorumPeerMain.java:171)
+	at org.apache.zookeeper.server.quorum.QuorumPeerMain.initializeAndRun(QuorumPeerMain.java:120)
+	at org.apache.zookeeper.server.quorum.QuorumPeerMain.main(QuorumPeerMain.java:79)
+Caused by: java.net.BindException: Address already in use
+	at java.net.PlainSocketImpl.socketBind(Native Method)
+	at java.net.AbstractPlainSocketImpl.bind(AbstractPlainSocketImpl.java:387)
+	at java.net.ServerSocket.bind(ServerSocket.java:375)
+	at java.net.ServerSocket.<init>(ServerSocket.java:237)
+	at java.net.ServerSocket.<init>(ServerSocket.java:181)
+	at org.mortbay.jetty.bio.SocketConnector.newServerSocket(SocketConnector.java:80)
+	at org.mortbay.jetty.bio.SocketConnector.open(SocketConnector.java:73)
+	at org.mortbay.jetty.AbstractConnector.doStart(AbstractConnector.java:283)
+	at org.mortbay.jetty.bio.SocketConnector.doStart(SocketConnector.java:147)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at org.mortbay.jetty.Server.doStart(Server.java:235)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at org.apache.zookeeper.server.admin.JettyAdminServer.start(JettyAdminServer.java:85)
+	... 4 more
+org.apache.zookeeper.server.admin.AdminServer$AdminServerException: Problem starting AdminServer on port 8080, command URL /commands
+2016-06-01 16:47:07,319 [myid:3] - INFO  [QuorumPeerListener:QuorumCnxManager$Listener@550] - My election bind port: localhost/127.0.0.1:3893
+2016-06-01 16:47:07,329 [myid:3] - INFO  [QuorumPeer[myid=3]/0:0:0:0:0:0:0:0:2283:QuorumPeer@922] - LOOKING
+2016-06-01 16:47:07,330 [myid:3] - INFO  [QuorumPeer[myid=3]/0:0:0:0:0:0:0:0:2283:FastLeaderElection@992] - New election. My id =  3, proposed zxid=0x1200000005
+2016-06-01 16:47:07,416 [myid:3] - INFO  [WorkerSender[myid=3]:FastLeaderElection$Messenger$WorkerSender@507] - ack file : /Users/wangsnowyin/Documents/zookeeper-3.5.1-alpha/ipc/ack/2406
+2016-06-01 16:47:07,416 [myid:3] - INFO  [WorkerSender[myid=3]:FastLeaderElection$Messenger$WorkerSender@508] - [DEBUG] start waiting for file : 2406
+2016-06-01 16:47:07,536 [myid:3] - INFO  [QuorumPeer[myid=3]/0:0:0:0:0:0:0:0:2283:FastLeaderElection@102016-06-01 16:47:07,679 [myid:1] 2016-06-01 16:47:07,937 [myid:3] - INFO  [QuorumPeer[myid=3]/0:0:0:0:0:0:0:0:2283:FastLeaderElection@1022016-06-01 16:47:08,166 [myid:1]2016-06-01 16:47:08,740 [myid:3] - INFO  [QuorumPeer[myid=3]/0:0:0:0:0:0:0:0:2283:FastLeaderElection@1026] - Notification time out: 1600
+2016-06-01 16:47:10,342 [myid:3] - INFO  [QuorumPeer[myid=3]/0:0:0:0:0:0:0:0:2283:FastLeaderElection@1026] - Notification time out: 3200
+2016-06-01 16:47:11,188 [myid:3] - INFO  [WorkerSender[myid=3]:FastLeaderElection$Messenger$WorkerSender@507] - ack file : /Users/wangsn2016-06-01 16:47:12,193 [myid:2] - INFO  [WorkerSender[myid=2]:FastLeaderElection$Messenger$WorkerSender@507] - ack file : /Users/wangsnowyin/Documents/zookeeper-3.5.1-alpha/ipc/ack/2562
+2016-06-01 16:2016-06-01 16:47:13,544 [myid:3] - INFO  [QuorumPeer[myid=3]/0:0:0:0:0:0:0:0:2283:FastLeaderElection@1026] - Notification time out: 6400
+2016-06-01 16:47:14,205 [myid:3] - INFO  [WorkerSender[myid=3]:FastLeaderElection$Messenger$WorkerSender@507] - ack file : /Users/wangsnowyin/Documents/zookeeper-3.5.1-alpha/ipc/ack/2744
+2016-06-01 16:47:14,205 [myid:3] - INFO  [WorkerSender[myid=3]:FastLeaderElection$Messenger$WorkerSender@508] - [DEBUG] start waiting for file : 2744
+2016-06-01 16:47:15,213 [myid:3] - INFO  [WorkerReceiver[myid=3]:FastLeaderElection@757] - Notification: 2 (message format version), 3 (n.leader), 0x1200000005 (n.zxid), 0x1 (n.round), LOOKING (n.state), 3 (n.sid), 0x12 (n.peerEPoch), LOOKING (my state)0 (n.config version)
+2016-06-01 16:47:15,217 [myid:3] - INFO  [WorkerSender[myid=3]:FastLeaderElection$Messenger$WorkerSender@507] - ack file : /Users/wangsnowyin/Do2016-06-01 16:47:16,401 [myid:2] - INFO  [QuorumPeer[myid=2]/0:0:0:0:0:0:0:0:2282:FastLeaderElection@1026] - Notification time out: 6400
+2016-06-01 16:47:16,404 [myid:2] - INFO  [WorkerSender[myid=2]:FastLeaderElection$Messenger$WorkerSender@507] - ack file : /Users/wangsnowyin/Documents/zookeeper-3.5.1-alpha/ipc/ack/2394
+2016-06-01 16:47:16,404 [myid:2] - INFO  [WorkerSender[myid=2]:FastLeaderElection$Messenger$WorkerSender@508] - [DEBUG] start waiting for file 2016-062016-06-01 16:47:19,272 [myid:2] - INFO  [WorkerSender[myid=2]:FastLeaderElection$Messenger$WorkerSender@507] - ack file : /Users/wangsnowyin/Documents/zookeeper-3.5.1-alpha/ipc/ack/2563
+2016-06-01 16:47:19,273 [myid:2] - INFO  [WorkerSender[myid=2]:FastLeaderElectio2016-06-01 16:47:22,309 [myid:3] - INFO  [WorkerSender[myid=3]:FastLeaderElection$Messenger$WorkerSender@507] - ack file : /Users/wangsnowyin/Documents/zookeeper-3.5.1-alpha/ipc/ack/2576
+2016-06-01 16:47:22,309 [myid:3] - INFO  [WorkerSender[myid=3]:FastLeaderElection$Messenger$WorkerSender@508] - [DEBUG] start waiting for file : 2576
+2016-062016-06-01 16:47:25,334 [myid:2] - INFO  [WorkerReceiver[myid=2]:FastLeaderElection@757] - Notification: 2 (message format version), 2 (n.leader), 0x1200000005 (n.zxid), 0x1 (n.round), LOOKING (n.state), 2 (n.sid), 0x12 (n.peerEPoch), LOOKING (my state)0 (n.config version)
+2016-06-01 16:47:25,339 [myid:2] - INFO  [WorkerSender[myid=2]:FastLeaderElection$Messenger$WorkerSender@507] - ack file : /Users/wangsnowyin/Documents/zookeeper-3.5.1-alpha/ipc/ack/2732
+2016-062016-06-01 16:47:27,374 [myid:3] - WARN  [RecvWorker:2:QuorumCnxManager$RecvWorker@836] - Connection broken for id 2, my id = 3, error = 
+java.io.EOFException
+	at java.io.DataInputStream.readInt(DataInputStream.java:392)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager$RecvWorker.run(QuorumCnxManager.java:821)
+2016-06-01 16:47:27,374 [myid:3] - WARN  [RecvWorker:2:QuorumCnxManager$RecvWorker@839] - Interrupting SendWorker
+2016-06-01 16:47:27,375 [myid:3] - WARN  [SendWorker:2:QuorumCnxManager$SendWorker@753] - Interrupted while waiting for message on queue
+java.lang.InterruptedException
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.reportInterruptAfterWait(AbstractQueuedSynchronizer.java:2014)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2088)
+	at java.util.concurrent.ArrayBlockingQueue.poll(ArrayBlockingQueue.java:418)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.pollSendQueue(QuorumCnxManager.java:905)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.access$500(QuorumCnxManager.java:62)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager$SendWorker.run(QuorumCnxManager.java:741)
+2016-06-01 16:47:27,376 [myid:3] - WARN  [SendWorker:2:QuorumCnxManager$SendWorker@762] - Send worker leaving thread  id 2 my id = 3
+2016-06-01 16:47:28,372 [myid:3] - INFO  [WorkerReceiver[myid=3]:FastLeaderElection@757] - Notification: 2 (message format version), 3 (n.leader), 0x1200000005 (n.zxid), 0x1 (n.round), LOOKING (n.state), 3 (n.sid), 0x12 (n.peerEPoch), LOOKING (my state)0 (n.config version)
+2016-06-01 16:47:28,373 [myid:3] - INFO  [WorkerSender[myid=3]:FastLeaderElection$Messenger$WorkerSender@507] - ack file : /Users/wangsnowyin/Documents/zookeeper-3.5.1-alpha/ipc/ack/2408
+2016-06-01 16:47:28,373 [myid:3] - INFO  [WorkerSender[myid=3]:FastLeaderElection$Messenger$WorkerSender@508] - [DEBUG] start waiting for file : 2408
+2016-06-01 16:47:29,381 [myid:3] - INFO  [WorkerSender[myid=3]:FastLeaderElection$Messenger$WorkerSender@507] - ack file : /Users/wangsnowyin/Documents/zookeeper-3.5.1-alpha/ipc/ack/2577
+2016-06-01 16:47:29,381 [myid:3] - INFO  [WorkerSender[myid=3]:FastLeaderElection$Messenger$WorkerSender@508] - [DEBUG] start waiting for file : 2577
+2016-06-01 16:47:30,388 [myid:3] - WARN  [WorkerSender[myid=3]:QuorumCnxManager@384] - Cannot open channel to 2 at election address localhost/127.0.0.1:3892
+java.net.ConnectException: Connection refused
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.connectOne(QuorumCnxManager.java:369)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.connectOne(QuorumCnxManager.java:407)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.toSend(QuorumCnxManager.java:346)
+	at org.apache.zookeeper.server.quorum.FastLeaderElection$Messenger$WorkerSender.process(FastLeaderElection.java:534)
+	at org.apache.zookeeper.server.quorum.FastLeaderElection$Messenger$WorkerSender.run(FastLeaderElection.java:464)
+	at java.lang.Thread.run(Thread.java:745)
+2016-06-01 16:47:30,394 [myid:3] - INFO  [WorkerSender[myid=3]:FastLeaderElection$Messenger$WorkerSender@507] - ack file : /Users/wangsnowyin/Documents/zookeeper-3.5.1-alpha/ipc/ack/2746
+2016-06-01 16:47:30,395 [myid:3] - INFO  [WorkerSender[myid=3]:FastLeaderElection$Messenger$WorkerSender@508] - [DEBUG] start waiting for file : 2746
+2016-06-01 16:47:31,402 [myid:3] - INFO  [WorkerReceiver[myid=3]:FastLeaderElection$Messenger$WorkerReceiver@298] - 3 Received version: 1300000000 my version: 0
+2016-06-01 16:47:31,408 [myid:3] - INFO  [WorkerReceiver[myid=3]:MBeanRegistry@119] - Unregister MBean [org.apache.ZooKeeperSe2016-06-01 16:47:31,737 [myid:2] - INFO  [QuorumPeer[myid=2]/0:0:0:0:0:0:0:0:2282:FastLeaderElection@1026] - Notification time out: 12800
+2016-06-01 16:47:31,737 [myid:2] - INFO  [QuorumPeer[myid=2]/0:0:0:0:0:0:0:0:2282:MBeanRegistry@119] - Unregister MBean [org.apache.ZooKeeperService:name0=ReplicatedServer_id2,name1=replica.2,name2=LeaderElection]
+2016-06-01 16:47:31,737 [myid:2] - INFO  [QuorumPeer[myid=2]/0:0:0:0:0:0:0:0:2282:QuorumPeer@922] - LOOKING
+2016-06-01 16:47:31,738 [myid:2] - INFO  [QuorumPeerListener:QuorumCnxManager$Listener@550] - My election bind port: localhost/127.0.0.1:3892
+2016-06-01 16:47:31,738 [myid:2] - INFO  [QuorumPeer[myid=2]/0:0:0:0:0:0:0:0:2282:FastLeaderElection@992] - New election. My id =  2, proposed zxid=0x1200000005
+2016-06-01 16:47:31,742 [myid:2] - INFO  [WorkerSender[myid=2]:FastLeaderElection$Messenger$WorkerSender@507] - ack file : /Users/wangsnowyin/Documents/zookeeper-3.5.1-alpha/ipc/ack/2395
+2016-06-01 16:47:31,742 [myid:2] - INFO  [WorkerSender[myid=2]:FastLeaderElection$Messenger$WorkerSender@508] - [DEBUG] start waiting for file : 2395
+2016-06-01 16:47:31,938 [myid:2] - INFO  [QuorumPeer[myid=2]/0:0:0:0:0:0:0:0:2282:FastLeaderElection@1026] - Notification time out: 400
+2016-06-01 16:47:32,340 [myid:2] - INFO  [QuorumPeer[myid=2]/0:0:0:0:0:0:0:0:2282:FastLeaderElection@1026] - Notification time out: 800
+2016-06-01 16:47:33,141 [myid:2] - INFO  [QuorumPeer[myid=2]/0:0:0:0:0:0:0:0:2282:FastLeaderElection@1026] - Notification time out: 1600
+2016-06-01 16:47:34,437 [myid:2] - WARN  [WorkerSender[myid=2]:QuorumCnxManager@418] - Invalid server id: 3
+2016-06-01 16:47:34,438 [myid:2] - INFO  [WorkerSender[myid=2]:FastLeaderElection$Messenger$WorkerSender@469] - WorkerSender is down
+2016-06-01 16:47:34,743 [myid:2] - INFO  [QuorumPeer[myid=2]/0:0:0:0:0:0:0:0:2282:FastLeaderElection@1026] - Notification time out: 3200
+16:47:31,412 [myid:3] - INFO  [WorkerReceiver[myid=3]:FastLeaderElection$Messenger$WorkerReceiver@439] - WorkerReceiver is down
+2016-06-01 16:47:31,415 [myid:3] - WARN  [SendWorker:1:QuorumCnxManager$SendWorker@762] - Send worker leaving thread  id 1 my id = 3
+2016-06-01 16:47:32,415 [myid:3] - INFO  [WorkerSender[myid=3]:FastLeaderElection$Messenger$WorkerSender@469] - WorkerSender is down
+r environment:java.version=1.8.0_73
+2016-06-01 16:47:17,461 [myid:1] - INFO  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2281:Environment@109] - Server environment:java.vendor=Oracle Corporation
+2016-06-01 16:47:17,461 [myid:1] - INFO  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2281:Environment@109] - Server environment:java.home=/Library/Java/JavaVirtualMachines/jdk1.8.0_73.jdk/Contents/Home/jre
+2016-06-01 16:47:17,461 [myid:1] - INFO  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2281:Environment@109] - Server environment:java.class.path=/Users/wangsnowyin/Documents/zookeeper-3.5.1-alpha/bin/../build/classes:/Users/wangsnowyin/Documents/zookeeper-3.5.1-alpha/bin/../build/lib/slf4j-log4j12-1.7.5.jar:/Users/wangsnowyin/Documents/zookeeper-3.5.1-alpha/bin/../build/lib/slf4j-api-1.7.5.jar:/Users/wangsnowyin/Documents/zookeeper-3.5.1-alpha/bin/../build/lib/servlet-api-2.5-20081211.jar:/Users/wangsnowyin/Documents/zookeeper-3.5.1-alpha/bin/../build/lib/netty-3.7.0.Final.jar:/Users/wangsnowyin/Documents/zookeeper-3.5.1-alpha/bin/../build/lib/log4j-1.2.16.jar:/Users/wangsnowyin/Documents/zookeeper-3.5.1-alpha/bin/../build/lib/jline-2.11.jar:/Users/wangsnowyin/Documents/zookeeper-3.5.1-alpha/bin/../build/lib/jetty-util-6.1.26.jar:/Users/wangsnowyin/Documents/zookeeper-3.5.1-alpha/bin/../build/lib/jetty-6.1.26.jar:/Users/wangsnowyin/Documents/zookeeper-3.5.1-alpha/bin/../build/lib/javacc.jar:/Users/wangsnowyin/Documents/zookeeper-3.5.1-alpha/bin/../build/lib/jackson-mapper-asl-1.9.11.jar:/Users/wangsnowyin/Documents/zookeeper-3.5.1-alpha/bin/../build/lib/jackson-core-asl-1.9.11.jar:/Users/wangsnowyin/Documents/zookeeper-3.5.1-alpha/bin/../build/lib/commons-cli-1.2.jar:/Users/wangsnowyin/Documents/zookeeper-3.5.1-alpha/bin/../lib/slf4j-log4j12-1.7.5.jar:/Users/wangsnowyin/Documents/zookeeper-3.5.1-alpha/bin/../lib/slf4j-api-1.7.5.jar:/Users/wangsnowyin/Documents/zookeeper-3.5.1-alpha/bin/../lib/servlet-api-2.5-20081211.jar:/Users/wangsnowyin/Documents/zookeeper-3.5.1-alpha/bin/../lib/netty-3.7.0.Final.jar:/Users/wangsnowyin/Documents/zookeeper-3.5.1-alpha/bin/../lib/log4j-1.2.16.jar:/Users/wangsnowyin/Documents/zookeeper-3.5.1-alpha/bin/../lib/jline-2.11.jar:/Users/wangsnowyin/Documents/zookeeper-3.5.1-alpha/bin/../lib/jetty-util-6.1.26.jar:/Users/wangsnowyin/Documents/zookeeper-3.5.1-alpha/bin/../lib/jetty-6.1.26.jar:/Users/wangsnowyin/Documents/zookeeper-3.5.1-alpha/bin/../lib/javacc.jar:/Users/wangsnowyin/Documents/zookeeper-3.5.1-alpha/bin/../lib/jackson-mapper-asl-1.9.11.jar:/Users/wangsnowyin/Documents/zookeeper-3.5.1-alpha/bin/../lib/jackson-core-asl-1.9.11.jar:/Users/wangsnowyin/Documents/zookeeper-3.5.1-alpha/bin/../lib/commons-cli-1.2.jar:/Users/wangsnowyin/Documents/zookeeper-3.5.1-alpha/bin/../zookeeper-3.5.0-alpha.jar:/Users/wangsnowyin/Documents/zookeeper-3.5.1-alpha/bin/../src/java/lib/ivy-2.2.0.jar:/Users/wangsnowyin/Documents/zookeeper-3.5.1-alpha/bin/../src/java/lib/ant-eclipse-1.0-jvm1.2.jar:/Users/wangsnowyin/Documents/zookeeper-3.5.1-alpha/bin/../conf::.:/Users/wangsnowyin/Documents/samc/samc-zookeeper/bin:/Users/wangsnowyin/Documents/samc/samc-zookeeper/lib/log4j-1.2.15.jar:/Users/wangsnowyin/Documents/samc/samc-zookeeper/lib/slf4j-api-1.6.1.jar:/Users/wangsnowyin/Documents/samc/samc-zookeeper/lib/slf4j-log4j12-1.6.1.jar:/Users/wangsnowyin/Documents/samc/samc-zookeeper/lib/sqlite4java.jar
+2016-06-01 16:47:17,461 [myid:1] - INFO  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2281:Environment@109] - Server environment:java.library.path=/Users/wangsnowyin/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.
+2016-06-01 16:47:17,462 [myid:1] - INFO  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2281:Environment@109] - Server environment:java.io.tmpdir=/var/folders/zn/txqjrn5n2vjdqkdswhvhp_gw0000gn/T/
+2016-06-01 16:47:17,462 [myid:1] - INFO  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2281:Environment@109] - Server environment:java.compiler=<NA>
+2016-06-01 16:47:17,462 [myid:1] - INFO  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2281:Environment@109] - Server environment:os.name=Mac OS X
+2016-06-01 16:47:17,462 [myid:1] - INFO  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2281:Environment@109] - Server environment:os.arch=x86_64
+2016-06-01 16:47:17,462 [myid:1] - INFO  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2281:Environment@109] - Server environment:os.version=10.11.5
+2016-06-01 16:47:17,462 [myid:1] - INFO  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2281:Environment@109] - Server environment:user.name=wangsnowyin
+2016-06-01 16:47:17,462 [myid:1] - INFO  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2281:Environment@109] - Server environment:user.home=/Users/wangsnowyin
+2016-06-01 16:47:17,462 [myid:1] - INFO  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2281:Environment@109] - Server environment:user.dir=/Users/wangsnowyin/Documents/zookeeper-3.5.1-alpha/sample-le
+2016-06-01 16:47:17,462 [myid:1] - INFO  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2281:Environment@109] - Server environment:os.memory.free=126MB
+2016-06-01 16:47:17,462 [myid:1] - INFO  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2281:Environment@109] - Server environment:os.memory.max=889MB
+2016-06-01 16:47:17,462 [myid:1] - INFO  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2281:Environment@109] - Server environment:os.memory.total=138MB
+2016-06-01 16:47:17,463 [myid:1] - INFO  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2281:ZooKeeperServer@781] - minSessionTimeout set to 10000
+2016-06-01 16:47:17,464 [myid:1] - INFO  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2281:ZooKeeperServer@790] - maxSessionTimeout set to 100000
+2016-06-01 16:47:17,464 [myid:1] - INFO  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2281:ZooKeeperServer@152] - Created server with tickTime 5000 minSessionTimeout 10000 maxSessionTimeout 100000 datadir /Users/wangsnowyin/Documents/zookeeper-3.5.1-alpha/data/data1/version-2 snapdir /Users/wangsnowyin/Documents/zookeeper-3.5.1-alpha/data/data1/version-2
+2016-06-01 16:47:17,465 [myid:1] - INFO  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2281:Leader@409] - LEADING - LEADER ELECTION TOOK - 19
+2016-06-01 16:47:17,467 [myid:1] - INFO  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2281:FileTxnSnapLog@298] - Snapshotting: 0x1200000005 to /Users/wangsnowyin/Documents/zookeeper-3.5.1-alpha/data/data1/version-2/snapshot.1200000005
+2016-06-01 16:47:17,476 [myid:1] - INFO  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2281:Leader@1251] - Have quorum of supporters, sids: [ [1],[1] ]; starting up and setting last processed zxid: 0x1300000000
+2016-06-01 16:47:17,488 [myid:1] - INFO  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2281:CommitProcessor@253] - Configuring CommitProcessor with 4 worker threads.
+2016-06-01 16:47:18,122 [myid:1] - INFO  [NIOServerCxnFactory.AcceptThread:/0.0.0.0:2281:NIOServerCnxnFactory$AcceptThread@296] - Accepted socket connection from /0:0:0:0:0:0:0:1:51562
+2016-06-01 16:47:18,125 [myid:1] - INFO  [NIOWorkerThread-2:ZooKeeperServer@872] - Client attempting to establish new session at /0:0:0:0:0:0:0:1:51562
+2016-06-01 16:47:18,127 [myid:1] - INFO  [SyncThread:1:FileTxnLog@200] - Creating new log file: log.1300000001
+2016-06-01 16:47:18,135 [myid:1] - INFO  [CommitProcWorkThread-1:ZooKeeperServer@619] - Established session 0x1550def58690000 with negotiated timeout 10000 for client /0:0:0:0:0:0:0:1:51562
+2016-06-01 16:47:18,301 [myid:1] - INFO  [WorkerSender[myid=1]:FastLeaderElection$Messenger$WorkerSender@507] - ack file : /Users/wangsnowyin/Documents/zookeeper-3.5.1-alpha/ipc/ack/2549
+2016-06-01 16:47:18,301 [myid:1] - INFO  [WorkerSender[myid=1]:FastLeaderElection$Messenger$WorkerSender@508] - [DEBUG] start waiting for file : 2549
+2016-06-01 16:47:18,562 [myid:1] - INFO  [NIOServerCxnFactory.AcceptThread:/0.0.0.0:2281:NIOServerCnxnFactory$AcceptThread@296] - Accepted socket connection from /10.150.7.90:51563
+2016-06-01 16:47:18,563 [myid:1] - INFO  [NIOWorkerThread-4:ZooKeeperServer@872] - Client attempting to establish new session at /10.150.7.90:51563
+2016-06-01 16:47:18,565 [myid:1] - INFO  [CommitProcWorkThread-2:ZooKeeperServer@619] - Established session 0x1550def58690001 with negotiated timeout 10000 for client /10.150.7.90:51563
+2016-06-01 16:47:20,287 [myid:1] - INFO  [WorkerSender[myid=1]:FastLeaderElection$Messenger$WorkerSender@507] - ack file : /Users/wangsnowyin/Documents/zookeeper-3.5.1-alpha/ipc/ack/2381
+2016-06-01 16:47:20,287 [myid:1] - INFO  [WorkerSender[myid=1]:FastLeaderElection$Messenger$WorkerSender@508] - [DEBUG] start waiting for file : 2381
+2016-06-01 16:47:21,304 [myid:1] - INFO  [ProcessThread(sid:1 cport:-1)::PrepRequestProcessor@549] - Incremental reconfig
+2016-06-01 16:47:21,305 [myid:1] - WARN  [ProcessThread(sid:1 cport:-1)::PrepRequestProcessor@613] - Reconfig failed - there must be a connected and synced quorum in new configuration
+2016-06-01 16:47:21,311 [myid:1] - INFO  [ProcessThread(sid:1 cport:-1)::PrepRequestProcessor@849] - Got user-level KeeperException when processing sessionid:0x1550def58690001 type:reconfig cxid:0x1 zxid:0x1300000003 txntype:-1 reqpath:n/a Error Path:null Error:KeeperErrorCode = NewConfigNoQuorum
+2016-06-01 16:47:21,312 [myid:1] - INFO  [ProcessThread(sid:1 cport:-1)::PrepRequestProcessor@549] - Incremental reconfig
+2016-06-01 16:47:21,313 [myid:1] - WARN  [ProcessThread(sid:1 cport:-1)::PrepRequestProcessor@613] - Reconfig failed - there must be a connected and synced quorum in new configuration
+2016-06-01 16:47:21,313 [myid:1] - INFO  [ProcessThread(sid:1 cport:-1)::PrepRequestProcessor@849] - Got user-level KeeperException when processing sessionid:0x1550def58690000 type:reconfig cxid:0x1 zxid:0x1300000004 txntype:-1 reqpath:n/a Error Path:null Error:KeeperErrorCode = NewConfigNoQuorum
+2016-06-01 16:47:21,688 [myid:1] - WARN  [NIOWorkerThread-7:NIOServerCnxn@368] - Unable to read additional data from client sessionid 0x1550def58690000, likely client has closed socket
+2016-06-01 16:47:21,688 [myid:1] - WARN  [NIOWorkerThread-6:NIOServerCnxn@368] - Unable to read additional data from client sessionid 0x1550def58690001, likely client has closed socket
+2016-06-01 16:47:21,689 [myid:1] - INFO  [NIOWorkerThread-7:MBeanRegistry@119] - Unregister MBean [org.apache.ZooKeeperService:name0=ReplicatedServer_id1,name1=replica.1,name2=Leader,name3=Connections,name4="0:0:0:0:0:0:0:1",name5=0x1550def58690000]
+2016-06-01 16:47:21,689 [myid:1] - INFO  [NIOWorkerThread-6:MBeanRegistry@119] - Unregister MBean [org.apache.ZooKeeperService:name0=ReplicatedServer_id1,name1=replica.1,name2=Leader,name3=Connections,name4=10.150.7.90,name5=0x1550def58690001]
+2016-06-01 16:47:21,689 [myid:1] - INFO  [NIOWorkerThread-7:NIOServerCnxn@1006] - Closed socket connection for client /0:0:0:0:0:0:0:1:51562 which had sessionid 0x1550def58690000
+2016-06-01 16:47:21,689 [myid:1] - INFO  [NIOWorkerThread-6:NIOServerCnxn@1006] - Closed socket connection for client /10.150.7.90:51563 which had sessionid 0x1550def58690001
+2016-06-01 16:47:26,344 [myid:1] - INFO  [WorkerReceiver[myid=1]:FastLeaderElection@757] - Notification: 2 (message format version), 1 (n.leader), 0x1200000005 (n.zxid), 0x1 (n.round), LOOKING (n.state), 1 (n.sid), 0x12 (n.peerEPoch), LEADING (my state)0 (n.config version)
+2016-06-01 16:47:26,349 [myid:1] - INFO  [WorkerSender[myid=1]:FastLeaderElection$Messenger$WorkerSender@507] - ack file : /Users/wangsnowyin/Documents/zookeeper-3.5.1-alpha/ipc/ack/2550
+2016-06-01 16:47:26,349 [myid:1] - INFO  [WorkerSender[myid=1]:FastLeaderElection$Messenger$WorkerSender@508] - [DEBUG] start waiting for file : 2550
+2016-06-01 16:47:27,363 [myid:1] - INFO  [WorkerSender[myid=1]:FastLeaderElection$Messenger$WorkerSender@507] - ack file : /Users/wangsnowyin/Documents/zookeeper-3.5.1-alpha/ipc/ack/2719
+2016-06-01 16:47:27,363 [myid:1] - INFO  [WorkerSender[myid=1]:FastLeaderElection$Messenger$WorkerSender@508] - [DEBUG] start waiting for file : 2719
+2016-06-01 16:47:27,377 [myid:1] - WARN  [RecvWorker:2:QuorumCnxManager$RecvWorker@836] - Connection broken for id 2, my id = 1, error = 
+java.io.EOFException
+	at java.io.DataInputStream.readInt(DataInputStream.java:392)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager$RecvWorker.run(QuorumCnxManager.java:821)
+2016-06-01 16:47:27,380 [myid:1] - WARN  [RecvWorker:2:QuorumCnxManager$RecvWorker@839] - Interrupting SendWorker
+2016-06-01 16:47:27,381 [myid:1] - WARN  [SendWorker:2:QuorumCnxManager$SendWorker@753] - Interrupted while waiting for message on queue
+java.lang.InterruptedException
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.reportInterruptAfterWait(AbstractQueuedSynchronizer.java:2014)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2088)
+	at java.util.concurrent.ArrayBlockingQueue.poll(ArrayBlockingQueue.java:418)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.pollSendQueue(QuorumCnxManager.java:905)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.access$500(QuorumCnxManager.java:62)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager$SendWorker.run(QuorumCnxManager.java:741)
+2016-06-01 16:47:27,382 [myid:1] - WARN  [SendWorker:2:QuorumCnxManager$SendWorker@762] - Send worker leaving thread  id 2 my id = 1
+2016-06-01 16:47:30,002 [myid:1] - INFO  [SessionTracker:ZooKeeperServer@349] - Expiring session 0x1550cb17ad50000, timeout of 10000ms exceeded
+2016-06-01 16:47:30,003 [myid:1] - INFO  [SessionTracker:QuorumZooKeeperServer@132] - Submitting global closeSession request for session 0x1550cb17ad50000
+2016-06-01 16:47:30,003 [myid:1] - INFO  [SessionTracker:ZooKeeperServer@349] - Expiring session 0x1550deb33660001, timeout of 10000ms exceeded
+2016-06-01 16:47:30,003 [myid:1] - INFO  [SessionTracker:QuorumZooKeeperServer@132] - Submitting global closeSession request for session 0x1550deb33660001
+2016-06-01 16:47:30,003 [myid:1] - INFO  [ProcessThread(sid:1 cport:-1)::PrepRequestProcessor@676] - Processed session termination for sessionid: 0x1550cb17ad50000
+2016-06-01 16:47:30,003 [myid:1] - INFO  [SessionTracker:ZooKeeperServer@349] - Expiring session 0x1550caf105c0000, timeout of 10000ms exceeded
+2016-06-01 16:47:30,003 [myid:1] - INFO  [ProcessThread(sid:1 cport:-1)::PrepRequestProcessor@676] - Processed session termination for sessionid: 0x1550deb33660001
+2016-06-01 16:47:30,003 [myid:1] - INFO  [SessionTracker:QuorumZooKeeperServer@132] - Submitting global closeSession request for session 0x1550caf105c0000
+2016-06-01 16:47:30,004 [myid:1] - INFO  [SessionTracker:ZooKeeperServer@349] - Expiring session 0x1550ca874550000, timeout of 10000ms exceeded
+2016-06-01 16:47:30,004 [myid:1] - INFO  [ProcessThread(sid:1 cport:-1)::PrepRequestProcessor@676] - Processed session termination for sessionid: 0x1550caf105c0000
+2016-06-01 16:47:30,004 [myid:1] - INFO  [SessionTracker:QuorumZooKeeperServer@132] - Submitting global closeSession request for session 0x1550ca874550000
+2016-06-01 16:47:30,004 [myid:1] - INFO  [SessionTracker:ZooKeeperServer@349] - Expiring session 0x1550caa40670000, timeout of 10000ms exceeded
+2016-06-01 16:47:30,004 [myid:1] - INFO  [ProcessThread(sid:1 cport:-1)::PrepRequestProcessor@676] - Processed session termination for sessionid: 0x1550ca874550000
+2016-06-01 16:47:30,004 [myid:1] - INFO  [SessionTracker:QuorumZooKeeperServer@132] - Submitting global closeSession request for session 0x1550caa40670000
+2016-06-01 16:47:30,004 [myid:1] - INFO  [SessionTracker:ZooKeeperServer@349] - Expiring session 0x1550ca5e0a10000, timeout of 10000ms exceeded
+2016-06-01 16:47:30,004 [myid:1] - INFO  [ProcessThread(sid:1 cport:-1)::PrepRequestProcessor@676] - Processed session termination for sessionid: 0x1550caa40670000
+2016-06-01 16:47:30,004 [myid:1] - INFO  [SessionTracker:QuorumZooKeeperServer@132] - Submitting global closeSession request for session 0x1550ca5e0a10000
+2016-06-01 16:47:30,005 [myid:1] - INFO  [SessionTracker:ZooKeeperServer@349] - Expiring session 0x1550cac28f10001, timeout of 10000ms exceeded
+2016-06-01 16:47:30,005 [myid:1] - INFO  [ProcessThread(sid:1 cport:-1)::PrepRequestProcessor@676] - Processed session termination for sessionid: 0x1550ca5e0a10000
+2016-06-01 16:47:30,005 [myid:1] - INFO  [SessionTracker:QuorumZooKeeperServer@132] - Submitting global closeSession request for session 0x1550cac28f10001
+2016-06-01 16:47:30,007 [myid:1] - INFO  [ProcessThread(sid:1 cport:-1)::PrepRequestProcessor@676] - Processed session termination for sessionid: 0x1550cac28f10001
+2016-06-01 16:47:31,410 [myid:1] - INFO  [WorkerSender[myid=1]:FastLeaderElection$Messenger$WorkerSender@507] - ack file : /Users/wangsnowyin/Documents/zookeeper-3.5.1-alpha/ipc/ack/2382
+2016-06-01 16:47:31,410 [myid:1] - INFO  [WorkerSender[myid=1]:FastLeaderElection$Messenger$WorkerSender@508] - [DEBUG] start waiting for file : 2382
+2016-06-01 16:47:31,411 [myid:1] - WARN  [RecvWorker:3:QuorumCnxManager$RecvWorker@836] - Connection broken for id 3, my id = 1, error = 
+java.io.EOFException
+	at java.io.DataInputStream.readInt(DataInputStream.java:392)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager$RecvWorker.run(QuorumCnxManager.java:821)
+2016-06-01 16:47:31,411 [myid:1] - WARN  [RecvWorker:3:QuorumCnxManager$RecvWorker@839] - Interrupting SendWorker
+2016-06-01 16:47:31,416 [myid:1] - WARN  [SendWorker:3:QuorumCnxManager$SendWorker@753] - Interrupted while waiting for message on queue
+java.lang.InterruptedException
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.reportInterruptAfterWait(AbstractQueuedSynchronizer.java:2014)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2088)
+	at java.util.concurrent.ArrayBlockingQueue.poll(ArrayBlockingQueue.java:418)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.pollSendQueue(QuorumCnxManager.java:905)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.access$500(QuorumCnxManager.java:62)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager$SendWorker.run(QuorumCnxManager.java:741)
+2016-06-01 16:47:31,418 [myid:1] - WARN  [SendWorker:3:QuorumCnxManager$SendWorker@762] - Send worker leaving thread  id 3 my id = 1
+2016-06-01 16:47:33,421 [myid:1] - INFO  [WorkerReceiver[myid=1]:FastLeaderElection@757] - Notification: 2 (message format version), 1 (n.leader), 0x1200000005 (n.zxid), 0xffffffffffffffff (n.round), LEADING (n.state), 1 (n.sid), 0x13 (n.peerEPoch), LEADING (my state)1300000000 (n.config version)
+2016-06-01 16:47:33,427 [myid:1] - INFO  [WorkerSender[myid=1]:FastLeaderElection$Messenger$WorkerSender@507] - ack file : /Users/wangsnowyin/Documents/zookeeper-3.5.1-alpha/ipc/ack/2720
+2016-06-01 16:47:33,428 [myid:1] - INFO  [WorkerSender[myid=1]:FastLeaderElection$Messenger$WorkerSender@508] - [DEBUG] start waiting for file : 2720
+2016-06-01 16:47:35,003 [myid:1] - INFO  [SessionTracker:ZooKeeperServer@349] - Expiring session 0x1550def58690000, timeout of 10000ms exceeded
+2016-06-01 16:47:35,004 [myid:1] - INFO  [SessionTracker:QuorumZooKeeperServer@132] - Submitting global closeSession request for session 0x1550def58690000
+2016-06-01 16:47:35,004 [myid:1] - INFO  [SessionTracker:ZooKeeperServer@349] - Expiring session 0x1550def58690001, timeout of 10000ms exceeded
+2016-06-01 16:47:35,004 [myid:1] - INFO  [ProcessThread(sid:1 cport:-1)::PrepRequestProcessor@676] - Processed session termination for sessionid: 0x1550def58690000
+2016-06-01 16:47:35,004 [myid:1] - INFO  [SessionTracker:QuorumZooKeeperServer@132] - Submitting global closeSession request for session 0x1550def58690001
+2016-06-01 16:47:35,004 [myid:1] - INFO  [ProcessThread(sid:1 cport:-1)::PrepRequestProcessor@676] - Processed session termination for sessionid: 0x1550def58690001
+2016-06-01 16:47:35,442 [myid:1] - WARN  [WorkerSender[myid=1]:QuorumCnxManager@418] - Invalid server id: 3

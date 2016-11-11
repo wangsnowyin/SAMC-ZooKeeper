@@ -1,0 +1,326 @@
+[DEBUG] Watching path: /Users/wangsnowyin/Documents/zookeeper-3.5.1-alpha/ipc/send
+Starting node 0
+Starting node 1
+Starting node 2
+Starts wait on first steady states
+[DEBUG] Process le File : eventId-2380 callbackName-LeaderElectionCallback1 sendNode-0 sendRole-LOOKING recvNode-0 leader-0 electionEpoch-1 peerEpoch-9
+[DEBUG] Process le File : eventId-2393 callbackName-LeaderElectionCallback2 sendNode-1 sendRole-LOOKING recvNode-0 leader-1 electionEpoch-1 peerEpoch-0
+[DEBUG] Process le File : eventId-2406 callbackName-LeaderElectionCallback3 sendNode-2 sendRole-LOOKING recvNode-0 leader-2 electionEpoch-1 peerEpoch-0
+Start Reordering
+-----------------------------
+[DEBUG] Events in Queue : 3
+packetsend transition_id=-1743774747 Event={eventId=7141, leader=0, peerEpoch=9, sourceNode=0, zkEventId=2380, sendRole=0, electionEpoch=1, destinationNode=0}
+packetsend transition_id=-1743774708 Event={eventId=7180, leader=1, peerEpoch=0, sourceNode=1, zkEventId=2393, sendRole=0, electionEpoch=1, destinationNode=0}
+packetsend transition_id=-1743774669 Event={eventId=7219, leader=2, peerEpoch=0, sourceNode=2, zkEventId=2406, sendRole=0, electionEpoch=1, destinationNode=0}
+-----------------------------
+Enable event with ID : 2406
+[DEBUG] Process le File : eventId-2575 callbackName-LeaderElectionCallback3 sendNode-2 sendRole-LOOKING recvNode-1 leader-2 electionEpoch-1 peerEpoch-0
+-----------------------------
+[DEBUG] Events in Queue : 3
+packetsend transition_id=-1743774747 Event={eventId=7141, leader=0, peerEpoch=9, sourceNode=0, zkEventId=2380, sendRole=0, electionEpoch=1, destinationNode=0}
+packetsend transition_id=-1743774708 Event={eventId=7180, leader=1, peerEpoch=0, sourceNode=1, zkEventId=2393, sendRole=0, electionEpoch=1, destinationNode=0}
+packetsend transition_id=-1743774162 Event={eventId=7726, leader=2, peerEpoch=0, sourceNode=2, zkEventId=2575, sendRole=0, electionEpoch=1, destinationNode=1}
+-----------------------------
+Enable event with ID : 2393
+[DEBUG] Process le File : eventId-2562 callbackName-LeaderElectionCallback2 sendNode-1 sendRole-LOOKING recvNode-1 leader-1 electionEpoch-1 peerEpoch-0
+-----------------------------
+[DEBUG] Events in Queue : 3
+packetsend transition_id=-1743774747 Event={eventId=7141, leader=0, peerEpoch=9, sourceNode=0, zkEventId=2380, sendRole=0, electionEpoch=1, destinationNode=0}
+packetsend transition_id=-1743774162 Event={eventId=7726, leader=2, peerEpoch=0, sourceNode=2, zkEventId=2575, sendRole=0, electionEpoch=1, destinationNode=1}
+packetsend transition_id=-1743774201 Event={eventId=7687, leader=1, peerEpoch=0, sourceNode=1, zkEventId=2562, sendRole=0, electionEpoch=1, destinationNode=1}
+-----------------------------
+Enable event with ID : 2562
+[DEBUG] Process le File : eventId-2394 callbackName-LeaderElectionCallback2 sendNode-1 sendRole-LOOKING recvNode-0 leader-1 electionEpoch-1 peerEpoch-0
+-----------------------------
+[DEBUG] Events in Queue : 3
+packetsend transition_id=-1743774747 Event={eventId=7141, leader=0, peerEpoch=9, sourceNode=0, zkEventId=2380, sendRole=0, electionEpoch=1, destinationNode=0}
+packetsend transition_id=-1743774162 Event={eventId=7726, leader=2, peerEpoch=0, sourceNode=2, zkEventId=2575, sendRole=0, electionEpoch=1, destinationNode=1}
+packetsend transition_id=-1743774705 Event={eventId=7183, leader=1, peerEpoch=0, sourceNode=1, zkEventId=2394, sendRole=0, electionEpoch=1, destinationNode=0}
+-----------------------------
+Enable event with ID : 2394
+[DEBUG] Process le File : eventId-2563 callbackName-LeaderElectionCallback2 sendNode-1 sendRole-LOOKING recvNode-1 leader-1 electionEpoch-1 peerEpoch-0
+-----------------------------
+[DEBUG] Events in Queue : 3
+packetsend transition_id=-1743774747 Event={eventId=7141, leader=0, peerEpoch=9, sourceNode=0, zkEventId=2380, sendRole=0, electionEpoch=1, destinationNode=0}
+packetsend transition_id=-1743774162 Event={eventId=7726, leader=2, peerEpoch=0, sourceNode=2, zkEventId=2575, sendRole=0, electionEpoch=1, destinationNode=1}
+packetsend transition_id=-1743774198 Event={eventId=7690, leader=1, peerEpoch=0, sourceNode=1, zkEventId=2563, sendRole=0, electionEpoch=1, destinationNode=1}
+-----------------------------
+Enable event with ID : 2563
+-----------------------------
+[DEBUG] Events in Queue : 2
+packetsend transition_id=-1743774747 Event={eventId=7141, leader=0, peerEpoch=9, sourceNode=0, zkEventId=2380, sendRole=0, electionEpoch=1, destinationNode=0}
+packetsend transition_id=-1743774162 Event={eventId=7726, leader=2, peerEpoch=0, sourceNode=2, zkEventId=2575, sendRole=0, electionEpoch=1, destinationNode=1}
+-----------------------------
+Enable event with ID : 2380
+[DEBUG] Process le File : eventId-2718 callbackName-LeaderElectionCallback1 sendNode-0 sendRole-LOOKING recvNode-2 leader-0 electionEpoch-1 peerEpoch-9
+[DEBUG] Receive update state u-1, sendrole=LEADING, leader=0
+-----------------------------
+[DEBUG] Events in Queue : 2
+packetsend transition_id=-1743774162 Event={eventId=7726, leader=2, peerEpoch=0, sourceNode=2, zkEventId=2575, sendRole=0, electionEpoch=1, destinationNode=1}
+packetsend transition_id=-1743773733 Event={eventId=8155, leader=0, peerEpoch=9, sourceNode=0, zkEventId=2718, sendRole=0, electionEpoch=1, destinationNode=2}
+-----------------------------
+Enable event with ID : 2718
+[DEBUG] Process le File : eventId-2549 callbackName-LeaderElectionCallback1 sendNode-0 sendRole-LOOKING recvNode-1 leader-0 electionEpoch-1 peerEpoch-9
+[DEBUG] Process reconfig File : eventId-2224
+[DEBUG] Process reconfig File : eventId-2224
+-----------------------------
+[DEBUG] Events in Queue : 3
+packetsend transition_id=-1743774162 Event={eventId=7726, leader=2, peerEpoch=0, sourceNode=2, zkEventId=2575, sendRole=0, electionEpoch=1, destinationNode=1}
+packetsend transition_id=-1743775215 Event={eventId=6673, sourceNode=2, zkEventId=2224, destinationNode=0}
+packetsend transition_id=-1743774240 Event={eventId=7648, leader=0, peerEpoch=9, sourceNode=0, zkEventId=2549, sendRole=0, electionEpoch=1, destinationNode=1}
+-----------------------------
+Enable event with ID : 2575
+[DEBUG] Process le File : eventId-2731 callbackName-LeaderElectionCallback2 sendNode-1 sendRole-LOOKING recvNode-2 leader-1 electionEpoch-1 peerEpoch-0
+[DEBUG] Process le File : eventId-2744 callbackName-LeaderElectionCallback3 sendNode-2 sendRole-LOOKING recvNode-2 leader-2 electionEpoch-1 peerEpoch-0
+-----------------------------
+[DEBUG] Events in Queue : 4
+packetsend transition_id=-1743775215 Event={eventId=6673, sourceNode=2, zkEventId=2224, destinationNode=0}
+packetsend transition_id=-1743774240 Event={eventId=7648, leader=0, peerEpoch=9, sourceNode=0, zkEventId=2549, sendRole=0, electionEpoch=1, destinationNode=1}
+packetsend transition_id=-1743773694 Event={eventId=8194, leader=1, peerEpoch=0, sourceNode=1, zkEventId=2731, sendRole=0, electionEpoch=1, destinationNode=2}
+packetsend transition_id=-1743773655 Event={eventId=8233, leader=2, peerEpoch=0, sourceNode=2, zkEventId=2744, sendRole=0, electionEpoch=1, destinationNode=2}
+-----------------------------
+Enable event with ID : 2744
+[DEBUG] Process le File : eventId-2407 callbackName-LeaderElectionCallback3 sendNode-2 sendRole-LOOKING recvNode-0 leader-2 electionEpoch-1 peerEpoch-0
+-----------------------------
+[DEBUG] Events in Queue : 3
+packetsend transition_id=-1743775215 Event={eventId=6673, sourceNode=2, zkEventId=2224, destinationNode=0}
+packetsend transition_id=-1743774240 Event={eventId=7648, leader=0, peerEpoch=9, sourceNode=0, zkEventId=2549, sendRole=0, electionEpoch=1, destinationNode=1}
+packetsend transition_id=-1743773694 Event={eventId=8194, leader=1, peerEpoch=0, sourceNode=1, zkEventId=2731, sendRole=0, electionEpoch=1, destinationNode=2}
+-----------------------------
+Enable event with ID : 2731
+-----------------------------
+[DEBUG] Events in Queue : 2
+packetsend transition_id=-1743775215 Event={eventId=6673, sourceNode=2, zkEventId=2224, destinationNode=0}
+packetsend transition_id=-1743774240 Event={eventId=7648, leader=0, peerEpoch=9, sourceNode=0, zkEventId=2549, sendRole=0, electionEpoch=1, destinationNode=1}
+-----------------------------
+Enable event with ID : 2549
+[DEBUG] Process le File : eventId-2381 callbackName-LeaderElectionCallback1 sendNode-0 sendRole-LOOKING recvNode-0 leader-0 electionEpoch-1 peerEpoch-9
+[DEBUG] Process le File : eventId-2395 callbackName-LeaderElectionCallback2 sendNode-1 sendRole-LOOKING recvNode-0 leader-0 electionEpoch-1 peerEpoch-9
+-----------------------------
+[DEBUG] Events in Queue : 3
+packetsend transition_id=-1743775215 Event={eventId=6673, sourceNode=2, zkEventId=2224, destinationNode=0}
+packetsend transition_id=-1743774744 Event={eventId=7144, leader=0, peerEpoch=9, sourceNode=0, zkEventId=2381, sendRole=0, electionEpoch=1, destinationNode=0}
+packetsend transition_id=-1743774702 Event={eventId=7186, leader=0, peerEpoch=9, sourceNode=1, zkEventId=2395, sendRole=0, electionEpoch=1, destinationNode=0}
+-----------------------------
+Enable event with ID : 2224
+-----------------------------
+[DEBUG] Events in Queue : 3
+packetsend transition_id=-1743774744 Event={eventId=7144, leader=0, peerEpoch=9, sourceNode=0, zkEventId=2381, sendRole=0, electionEpoch=1, destinationNode=0}
+packetsend transition_id=-1743774702 Event={eventId=7186, leader=0, peerEpoch=9, sourceNode=1, zkEventId=2395, sendRole=0, electionEpoch=1, destinationNode=0}
+packetsend transition_id=-1743775214 Event={eventId=6674, sourceNode=2, zkEventId=2224, destinationNode=0}
+-----------------------------
+Enable event with ID : 2395
+[DEBUG] Process le File : eventId-2564 callbackName-LeaderElectionCallback2 sendNode-1 sendRole-LOOKING recvNode-1 leader-0 electionEpoch-1 peerEpoch-9
+-----------------------------
+[DEBUG] Events in Queue : 3
+packetsend transition_id=-1743774744 Event={eventId=7144, leader=0, peerEpoch=9, sourceNode=0, zkEventId=2381, sendRole=0, electionEpoch=1, destinationNode=0}
+packetsend transition_id=-1743775214 Event={eventId=6674, sourceNode=2, zkEventId=2224, destinationNode=0}
+packetsend transition_id=-1743774195 Event={eventId=7693, leader=0, peerEpoch=9, sourceNode=1, zkEventId=2564, sendRole=0, electionEpoch=1, destinationNode=1}
+-----------------------------
+Enable event with ID : 2564
+[DEBUG] Receive update state u-2, sendrole=FOLLOWING, leader=0
+[DEBUG] Process sync File : eventId-2396 callbackName-LeaderElectionCallback2 sendNode-1 sendRole-following recvNode-0 leader-0
+-----------------------------
+[DEBUG] Events in Queue : 3
+packetsend transition_id=-1743774744 Event={eventId=7144, leader=0, peerEpoch=9, sourceNode=0, zkEventId=2381, sendRole=0, electionEpoch=1, destinationNode=0}
+packetsend transition_id=-1743775214 Event={eventId=6674, sourceNode=2, zkEventId=2224, destinationNode=0}
+packetsend transition_id=-1743774699 Event={eventId=7189, leader=0, sourceNode=1, zkEventId=2396, sendRole=1, destinationNode=0}
+-----------------------------
+Enable event with ID : 2396
+[DEBUG] Process sync File : eventId-2550 callbackName-LeaderElectionCallback1 sendNode-0 sendRole-leading recvNode-1 leader-0
+-----------------------------
+[DEBUG] Events in Queue : 3
+packetsend transition_id=-1743774744 Event={eventId=7144, leader=0, peerEpoch=9, sourceNode=0, zkEventId=2381, sendRole=0, electionEpoch=1, destinationNode=0}
+packetsend transition_id=-1743775214 Event={eventId=6674, sourceNode=2, zkEventId=2224, destinationNode=0}
+packetsend transition_id=-1743774237 Event={eventId=7651, leader=0, sourceNode=0, zkEventId=2550, sendRole=2, destinationNode=1}
+-----------------------------
+Enable event with ID : 2550
+[DEBUG] Process sync File : eventId-2397 callbackName-LeaderElectionCallback2 sendNode-1 sendRole-following recvNode-0 leader-0
+-----------------------------
+[DEBUG] Events in Queue : 3
+packetsend transition_id=-1743774744 Event={eventId=7144, leader=0, peerEpoch=9, sourceNode=0, zkEventId=2381, sendRole=0, electionEpoch=1, destinationNode=0}
+packetsend transition_id=-1743775214 Event={eventId=6674, sourceNode=2, zkEventId=2224, destinationNode=0}
+packetsend transition_id=-1743774696 Event={eventId=7192, leader=0, sourceNode=1, zkEventId=2397, sendRole=1, destinationNode=0}
+-----------------------------
+Enable event with ID : 2224
+-----------------------------
+[DEBUG] Events in Queue : 3
+packetsend transition_id=-1743774744 Event={eventId=7144, leader=0, peerEpoch=9, sourceNode=0, zkEventId=2381, sendRole=0, electionEpoch=1, destinationNode=0}
+packetsend transition_id=-1743774696 Event={eventId=7192, leader=0, sourceNode=1, zkEventId=2397, sendRole=1, destinationNode=0}
+packetsend transition_id=-1743774666 Event={eventId=7222, leader=2, peerEpoch=0, sourceNode=2, zkEventId=2407, sendRole=0, electionEpoch=1, destinationNode=0}
+-----------------------------
+Enable event with ID : 2397
+[DEBUG] Process sync File : eventId-2551 callbackName-LeaderElectionCallback1 sendNode-0 sendRole-leading recvNode-1 leader-0
+-----------------------------
+[DEBUG] Events in Queue : 3
+packetsend transition_id=-1743774744 Event={eventId=7144, leader=0, peerEpoch=9, sourceNode=0, zkEventId=2381, sendRole=0, electionEpoch=1, destinationNode=0}
+packetsend transition_id=-1743774666 Event={eventId=7222, leader=2, peerEpoch=0, sourceNode=2, zkEventId=2407, sendRole=0, electionEpoch=1, destinationNode=0}
+packetsend transition_id=-1743774234 Event={eventId=7654, leader=0, sourceNode=0, zkEventId=2551, sendRole=2, destinationNode=1}
+-----------------------------
+Enable event with ID : 2381
+[DEBUG] Process le File : eventId-2552 callbackName-LeaderElectionCallback1 sendNode-0 sendRole-LOOKING recvNode-1 leader-0 electionEpoch-1 peerEpoch-9
+-----------------------------
+[DEBUG] Events in Queue : 2
+packetsend transition_id=-1743774666 Event={eventId=7222, leader=2, peerEpoch=0, sourceNode=2, zkEventId=2407, sendRole=0, electionEpoch=1, destinationNode=0}
+packetsend transition_id=-1743774234 Event={eventId=7654, leader=0, sourceNode=0, zkEventId=2551, sendRole=2, destinationNode=1}
+-----------------------------
+Enable event with ID : 2551
+[DEBUG] Process sync File : eventId-2553 callbackName-LeaderElectionCallback1 sendNode-0 sendRole-leading recvNode-1 leader-0
+-----------------------------
+[DEBUG] Events in Queue : 2
+packetsend transition_id=-1743774666 Event={eventId=7222, leader=2, peerEpoch=0, sourceNode=2, zkEventId=2407, sendRole=0, electionEpoch=1, destinationNode=0}
+packetsend transition_id=-1743774231 Event={eventId=7657, leader=0, peerEpoch=9, sourceNode=0, zkEventId=2552, sendRole=0, electionEpoch=1, destinationNode=1}
+-----------------------------
+Enable event with ID : 2552
+[DEBUG] Process le File : eventId-2398 callbackName-LeaderElectionCallback2 sendNode-1 sendRole-FOLLOWING recvNode-0 leader-0 electionEpoch--1 peerEpoch-9
+[DEBUG] Process le File : eventId-2554 callbackName-LeaderElectionCallback1 sendNode-0 sendRole-LEADING recvNode-1 leader-0 electionEpoch-1 peerEpoch-10
+-----------------------------
+[DEBUG] Events in Queue : 3
+packetsend transition_id=-1743774666 Event={eventId=7222, leader=2, peerEpoch=0, sourceNode=2, zkEventId=2407, sendRole=0, electionEpoch=1, destinationNode=0}
+packetsend transition_id=-1743774693 Event={eventId=7195, leader=0, peerEpoch=9, sourceNode=1, zkEventId=2398, sendRole=1, electionEpoch=-1, destinationNode=0}
+packetsend transition_id=-1743774228 Event={eventId=7660, leader=0, sourceNode=0, zkEventId=2553, sendRole=2, destinationNode=1}
+-----------------------------
+Enable event with ID : 2553
+[DEBUG] Process sync File : eventId-2399 callbackName-LeaderElectionCallback2 sendNode-1 sendRole-following recvNode-0 leader-0
+-----------------------------
+[DEBUG] Events in Queue : 3
+packetsend transition_id=-1743774666 Event={eventId=7222, leader=2, peerEpoch=0, sourceNode=2, zkEventId=2407, sendRole=0, electionEpoch=1, destinationNode=0}
+packetsend transition_id=-1743774693 Event={eventId=7195, leader=0, peerEpoch=9, sourceNode=1, zkEventId=2398, sendRole=1, electionEpoch=-1, destinationNode=0}
+packetsend transition_id=-1743774225 Event={eventId=7663, leader=0, peerEpoch=10, sourceNode=0, zkEventId=2554, sendRole=2, electionEpoch=1, destinationNode=1}
+-----------------------------
+Enable event with ID : 2398
+-----------------------------
+[DEBUG] Events in Queue : 3
+packetsend transition_id=-1743774666 Event={eventId=7222, leader=2, peerEpoch=0, sourceNode=2, zkEventId=2407, sendRole=0, electionEpoch=1, destinationNode=0}
+packetsend transition_id=-1743774225 Event={eventId=7663, leader=0, peerEpoch=10, sourceNode=0, zkEventId=2554, sendRole=2, electionEpoch=1, destinationNode=1}
+packetsend transition_id=-1743774690 Event={eventId=7198, leader=0, sourceNode=1, zkEventId=2399, sendRole=1, destinationNode=0}
+-----------------------------
+Enable event with ID : 2407
+[DEBUG] Process le File : eventId-2576 callbackName-LeaderElectionCallback3 sendNode-2 sendRole-LOOKING recvNode-1 leader-2 electionEpoch-1 peerEpoch-0
+-----------------------------
+[DEBUG] Events in Queue : 3
+packetsend transition_id=-1743774225 Event={eventId=7663, leader=0, peerEpoch=10, sourceNode=0, zkEventId=2554, sendRole=2, electionEpoch=1, destinationNode=1}
+packetsend transition_id=-1743774690 Event={eventId=7198, leader=0, sourceNode=1, zkEventId=2399, sendRole=1, destinationNode=0}
+packetsend transition_id=-1743774159 Event={eventId=7729, leader=2, peerEpoch=0, sourceNode=2, zkEventId=2576, sendRole=0, electionEpoch=1, destinationNode=1}
+-----------------------------
+Enable event with ID : 2576
+[DEBUG] Process le File : eventId-2732 callbackName-LeaderElectionCallback2 sendNode-1 sendRole-FOLLOWING recvNode-2 leader-0 electionEpoch-1 peerEpoch-9
+[DEBUG] Process le File : eventId-2745 callbackName-LeaderElectionCallback3 sendNode-2 sendRole-LOOKING recvNode-2 leader-2 electionEpoch-1 peerEpoch-0
+-----------------------------
+[DEBUG] Events in Queue : 4
+packetsend transition_id=-1743774225 Event={eventId=7663, leader=0, peerEpoch=10, sourceNode=0, zkEventId=2554, sendRole=2, electionEpoch=1, destinationNode=1}
+packetsend transition_id=-1743774690 Event={eventId=7198, leader=0, sourceNode=1, zkEventId=2399, sendRole=1, destinationNode=0}
+packetsend transition_id=-1743773691 Event={eventId=8197, leader=0, peerEpoch=9, sourceNode=1, zkEventId=2732, sendRole=1, electionEpoch=1, destinationNode=2}
+packetsend transition_id=-1743773652 Event={eventId=8236, leader=2, peerEpoch=0, sourceNode=2, zkEventId=2745, sendRole=0, electionEpoch=1, destinationNode=2}
+-----------------------------
+Enable event with ID : 2554
+[DEBUG] Process le File : eventId-2382 callbackName-LeaderElectionCallback1 sendNode-0 sendRole-LEADING recvNode-0 leader-0 electionEpoch--1 peerEpoch-10
+-----------------------------
+[DEBUG] Events in Queue : 4
+packetsend transition_id=-1743774690 Event={eventId=7198, leader=0, sourceNode=1, zkEventId=2399, sendRole=1, destinationNode=0}
+packetsend transition_id=-1743773691 Event={eventId=8197, leader=0, peerEpoch=9, sourceNode=1, zkEventId=2732, sendRole=1, electionEpoch=1, destinationNode=2}
+packetsend transition_id=-1743773652 Event={eventId=8236, leader=2, peerEpoch=0, sourceNode=2, zkEventId=2745, sendRole=0, electionEpoch=1, destinationNode=2}
+packetsend transition_id=-1743774741 Event={eventId=7147, leader=0, peerEpoch=10, sourceNode=0, zkEventId=2382, sendRole=2, electionEpoch=-1, destinationNode=0}
+-----------------------------
+Enable event with ID : 2732
+-----------------------------
+[DEBUG] Events in Queue : 3
+packetsend transition_id=-1743774690 Event={eventId=7198, leader=0, sourceNode=1, zkEventId=2399, sendRole=1, destinationNode=0}
+packetsend transition_id=-1743773652 Event={eventId=8236, leader=2, peerEpoch=0, sourceNode=2, zkEventId=2745, sendRole=0, electionEpoch=1, destinationNode=2}
+packetsend transition_id=-1743774741 Event={eventId=7147, leader=0, peerEpoch=10, sourceNode=0, zkEventId=2382, sendRole=2, electionEpoch=-1, destinationNode=0}
+-----------------------------
+Enable event with ID : 2382
+[DEBUG] Process le File : eventId-2555 callbackName-LeaderElectionCallback1 sendNode-0 sendRole-LEADING recvNode-1 leader-0 electionEpoch-1 peerEpoch-10
+-----------------------------
+[DEBUG] Events in Queue : 3
+packetsend transition_id=-1743774690 Event={eventId=7198, leader=0, sourceNode=1, zkEventId=2399, sendRole=1, destinationNode=0}
+packetsend transition_id=-1743773652 Event={eventId=8236, leader=2, peerEpoch=0, sourceNode=2, zkEventId=2745, sendRole=0, electionEpoch=1, destinationNode=2}
+packetsend transition_id=-1743774222 Event={eventId=7666, leader=0, peerEpoch=10, sourceNode=0, zkEventId=2555, sendRole=2, electionEpoch=1, destinationNode=1}
+-----------------------------
+Enable event with ID : 2745
+[DEBUG] Process le File : eventId-2408 callbackName-LeaderElectionCallback3 sendNode-2 sendRole-LOOKING recvNode-0 leader-0 electionEpoch-1 peerEpoch-9
+-----------------------------
+[DEBUG] Events in Queue : 3
+packetsend transition_id=-1743774690 Event={eventId=7198, leader=0, sourceNode=1, zkEventId=2399, sendRole=1, destinationNode=0}
+packetsend transition_id=-1743774222 Event={eventId=7666, leader=0, peerEpoch=10, sourceNode=0, zkEventId=2555, sendRole=2, electionEpoch=1, destinationNode=1}
+packetsend transition_id=-1743774663 Event={eventId=7225, leader=0, peerEpoch=9, sourceNode=2, zkEventId=2408, sendRole=0, electionEpoch=1, destinationNode=0}
+-----------------------------
+Enable event with ID : 2408
+[DEBUG] Process le File : eventId-2577 callbackName-LeaderElectionCallback3 sendNode-2 sendRole-LOOKING recvNode-1 leader-0 electionEpoch-1 peerEpoch-9
+-----------------------------
+[DEBUG] Events in Queue : 3
+packetsend transition_id=-1743774690 Event={eventId=7198, leader=0, sourceNode=1, zkEventId=2399, sendRole=1, destinationNode=0}
+packetsend transition_id=-1743774222 Event={eventId=7666, leader=0, peerEpoch=10, sourceNode=0, zkEventId=2555, sendRole=2, electionEpoch=1, destinationNode=1}
+packetsend transition_id=-1743774156 Event={eventId=7732, leader=0, peerEpoch=9, sourceNode=2, zkEventId=2577, sendRole=0, electionEpoch=1, destinationNode=1}
+-----------------------------
+Enable event with ID : 2555
+[DEBUG] Process le File : eventId-2719 callbackName-LeaderElectionCallback1 sendNode-0 sendRole-LEADING recvNode-2 leader-0 electionEpoch-1 peerEpoch-10
+-----------------------------
+[DEBUG] Events in Queue : 3
+packetsend transition_id=-1743774690 Event={eventId=7198, leader=0, sourceNode=1, zkEventId=2399, sendRole=1, destinationNode=0}
+packetsend transition_id=-1743774156 Event={eventId=7732, leader=0, peerEpoch=9, sourceNode=2, zkEventId=2577, sendRole=0, electionEpoch=1, destinationNode=1}
+packetsend transition_id=-1743773730 Event={eventId=8158, leader=0, peerEpoch=10, sourceNode=0, zkEventId=2719, sendRole=2, electionEpoch=1, destinationNode=2}
+-----------------------------
+Enable event with ID : 2577
+[DEBUG] Process le File : eventId-2746 callbackName-LeaderElectionCallback3 sendNode-2 sendRole-LOOKING recvNode-2 leader-0 electionEpoch-1 peerEpoch-9
+-----------------------------
+[DEBUG] Events in Queue : 3
+packetsend transition_id=-1743774690 Event={eventId=7198, leader=0, sourceNode=1, zkEventId=2399, sendRole=1, destinationNode=0}
+packetsend transition_id=-1743773730 Event={eventId=8158, leader=0, peerEpoch=10, sourceNode=0, zkEventId=2719, sendRole=2, electionEpoch=1, destinationNode=2}
+packetsend transition_id=-1743773649 Event={eventId=8239, leader=0, peerEpoch=9, sourceNode=2, zkEventId=2746, sendRole=0, electionEpoch=1, destinationNode=2}
+-----------------------------
+Enable event with ID : 2719
+[DEBUG] Process le File : eventId-2720 callbackName-LeaderElectionCallback1 sendNode-0 sendRole-LEADING recvNode-2 leader-0 electionEpoch-1 peerEpoch-10
+-----------------------------
+[DEBUG] Events in Queue : 3
+packetsend transition_id=-1743774690 Event={eventId=7198, leader=0, sourceNode=1, zkEventId=2399, sendRole=1, destinationNode=0}
+packetsend transition_id=-1743773649 Event={eventId=8239, leader=0, peerEpoch=9, sourceNode=2, zkEventId=2746, sendRole=0, electionEpoch=1, destinationNode=2}
+packetsend transition_id=-1743773727 Event={eventId=8161, leader=0, peerEpoch=10, sourceNode=0, zkEventId=2720, sendRole=2, electionEpoch=1, destinationNode=2}
+-----------------------------
+Enable event with ID : 2746
+-----------------------------
+[DEBUG] Events in Queue : 2
+packetsend transition_id=-1743774690 Event={eventId=7198, leader=0, sourceNode=1, zkEventId=2399, sendRole=1, destinationNode=0}
+packetsend transition_id=-1743773727 Event={eventId=8161, leader=0, peerEpoch=10, sourceNode=0, zkEventId=2720, sendRole=2, electionEpoch=1, destinationNode=2}
+-----------------------------
+Enable event with ID : 2399
+[DEBUG] Process sync File : eventId-2556 callbackName-LeaderElectionCallback1 sendNode-0 sendRole-leading recvNode-1 leader-0
+-----------------------------
+[DEBUG] Events in Queue : 2
+packetsend transition_id=-1743773727 Event={eventId=8161, leader=0, peerEpoch=10, sourceNode=0, zkEventId=2720, sendRole=2, electionEpoch=1, destinationNode=2}
+packetsend transition_id=-1743774219 Event={eventId=7669, leader=0, sourceNode=0, zkEventId=2556, sendRole=2, destinationNode=1}
+-----------------------------
+Enable event with ID : 2556
+[DEBUG] Process sync File : eventId-2400 callbackName-LeaderElectionCallback2 sendNode-1 sendRole-following recvNode-0 leader-0
+-----------------------------
+[DEBUG] Events in Queue : 2
+packetsend transition_id=-1743773727 Event={eventId=8161, leader=0, peerEpoch=10, sourceNode=0, zkEventId=2720, sendRole=2, electionEpoch=1, destinationNode=2}
+packetsend transition_id=-1743774687 Event={eventId=7201, leader=0, sourceNode=1, zkEventId=2400, sendRole=1, destinationNode=0}
+-----------------------------
+Enable event with ID : 2720
+-----------------------------
+[DEBUG] Events in Queue : 1
+packetsend transition_id=-1743774687 Event={eventId=7201, leader=0, sourceNode=1, zkEventId=2400, sendRole=1, destinationNode=0}
+-----------------------------
+Enable event with ID : 2400
+-----------------------------
+[DEBUG] Events in Queue : 0
+-----------------------------
+-----------------------------
+[DEBUG] Events in Queue : 0
+-----------------------------
+-----------------------------
+[DEBUG] Events in Queue : 0
+-----------------------------
+Verifier: onlineNode-3 quorum-2 numLeader-1 numFollower-1 numLooking-1
+Verifier: onlineNode-3 quorum-2 numLeader-1 numFollower-1 numLooking-1
+Verifier: onlineNode-3 quorum-2 numLeader-1 numFollower-1 numLooking-1
+---- End of Path Execution ----
+Stopping node 0
+Stopping node 1
+Stopping node 2
+Finished cleaning up
+enter to continueStopping node 0
+Stopping node 1
+Stopping node 2
+Finished cleaning up
