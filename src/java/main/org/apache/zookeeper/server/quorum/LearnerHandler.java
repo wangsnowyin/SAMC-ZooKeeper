@@ -334,11 +334,10 @@ public class LearnerHandler extends ZooKeeperThread {
     	// create new file
     	try{
         	PrintWriter writer = new PrintWriter(ipcDir + "/new/sync-" + eventId, "UTF-8");
-        	writer.println("callbackName=" + "LeaderElectionCallback"+leaderId);
-	        writer.println("sendNode=" + (leaderId-1));
-	        writer.println("recvNode=" + (this.getSid()-1));
+	        writer.println("sender=" + (leaderId-1));
+	        writer.println("recv=" + (this.getSid()-1));
 	        writer.println("leader=" + (leaderId-1));
-	        writer.println("sendRole=" + this.leader.self.getPeerState().getValue());
+	        writer.println("state=" + this.leader.self.getPeerState().getValue());
 	        writer.println("strSendRole=" + this.leader.self.getServerState());
 	        writer.println("zxid=" + qp.getZxid());
 	        writer.close();

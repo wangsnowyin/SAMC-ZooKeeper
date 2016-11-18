@@ -89,7 +89,7 @@ public class FastLeaderElection implements Election {
 
     QuorumCnxManager manager;
     
-    public static String ipcDir = "/Users/wangsnowyin/Documents/zookeeper-3.5.1-alpha/ipc";
+    public static String ipcDir = "/tmp/ipc";
     
 
     /**
@@ -479,15 +479,14 @@ public class FastLeaderElection implements Election {
             	
             	// create new file
             	try{
-    	        	PrintWriter writer = new PrintWriter(ipcDir + "/new/le-" + eventId, "UTF-8");
-    	        	writer.println("callbackName=" + "LeaderElectionCallback"+self.getId());
-    		        writer.println("sendNode=" + (self.getId()-1));
-    		        writer.println("recvNode=" + (m.sid-1));
-    		        writer.println("sendRole=" + m.state.getValue());
+    	        	PrintWriter writer = new PrintWriter(ipcDir + "/new/zk-" + eventId, "UTF-8");
+    		        writer.println("sender=" + (self.getId()-1));
+    		        writer.println("recv=" + (m.sid-1));
+    		        writer.println("state=" + m.state.getValue());
     		        writer.println("strSendRole=" + m.state);
     		        writer.println("leader=" + (m.leader-1));
     		        writer.println("zxid=" + m.zxid);
-    		        writer.println("electionEpoch=" + m.electionEpoch);
+    		        writer.println("epoch=" + m.electionEpoch);
     		        writer.println("peerEpoch=" + m.peerEpoch);
     		        writer.close();
             	} catch (Exception e) {
@@ -496,10 +495,10 @@ public class FastLeaderElection implements Election {
             	
             	// move new file to send folder - commit message
             	try{
-            		Runtime.getRuntime().exec("mv " + ipcDir + "/new/le-" + eventId + " " + 
-            				ipcDir + "/send/le-" + eventId);
+            		Runtime.getRuntime().exec("mv " + ipcDir + "/new/zk-" + eventId + " " + 
+            				ipcDir + "/send/zk-" + eventId);
             	} catch (Exception e){
-                	LOG.error("[ERROR] error in moving file to send folder : le-" + eventId);
+                	LOG.error("[ERROR] error in moving file to send folder : zk-" + eventId);
             	}
             	            	
             	// wait for dmck signal
@@ -874,11 +873,11 @@ public class FastLeaderElection implements Election {
     synchronized void updateStatetoDMCK(long leader, HashMap<Long, Vote> recvset, long sender, QuorumPeer.ServerState state){
 		// create new file
     	try{
-        	PrintWriter writer = new PrintWriter(ipcDir + "/new/u-" + self.getId());
-	        writer.println("sendNode=" + (sender-1));
-	        writer.println("sendRole=" + state.getValue());
+        	PrintWriter writer = new PrintWriter(ipcDir + "/new/zkls-" + self.getId());
+	        writer.println("sender=" + (sender-1));
+	        writer.println("state=" + state.getValue());
 	        writer.println("strSendRole=" + state);
-	        writer.println("leader=" + (leader-1));
+	        writer.println("proposedLeader=" + (leader-1));
 	        writer.print("electionTable=");
 	        for (long node : recvset.keySet()){
 		        writer.print(node + ":" + (recvset.get(node).getId()-1) + ",");
@@ -886,15 +885,15 @@ public class FastLeaderElection implements Election {
 	        writer.close();
 	        System.err.println("[updatetoDMCK] sendNode-" + sender + " sendRole-" + state + " leader-" + leader);
     	} catch (Exception e) {
-        	LOG.error("[DEBUG] error in creating new file : u-" + self.getId());
+        	LOG.error("[DEBUG] error in creating new file : zkls-" + self.getId());
     	}
     	
     	// move new file to send folder - commit message
     	try{
-    		Runtime.getRuntime().exec("mv " + ipcDir + "/new/u-" + self.getId() + " " + 
+    		Runtime.getRuntime().exec("mv " + ipcDir + "/new/zkls-" + self.getId() + " " + 
     				ipcDir + "/send/u-" + self.getId());
     	} catch (Exception e){
-        	LOG.error("[DEBUG] error in moving file to send folder : u-" + self.getId());
+        	LOG.error("[DEBUG] error in moving file to send folder : zkls-" + self.getId());
     	}
 	}
 

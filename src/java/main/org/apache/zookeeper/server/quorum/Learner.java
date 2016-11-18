@@ -263,11 +263,10 @@ public class Learner {
     	// create new file
     	try{
         	PrintWriter writer = new PrintWriter(ipcDir + "/new/sync-" + eventId, "UTF-8");
-        	writer.println("callbackName=" + "LeaderElectionCallback"+self.getId());
-	        writer.println("sendNode=" + (self.getId()-1));
-	        writer.println("recvNode=" + (leaderId-1));
+	        writer.println("sender=" + (self.getId()-1));
+	        writer.println("recv=" + (leaderId-1));
 	        writer.println("leader=" + (leaderId-1));
-	        writer.println("sendRole=" + self.getPeerState().getValue());
+	        writer.println("state=" + self.getPeerState().getValue());
 	        writer.println("strSendRole=" + self.getServerState());
 	        writer.println("zxid=" + qp.getZxid());
 	        writer.close();

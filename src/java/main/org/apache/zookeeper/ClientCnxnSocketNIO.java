@@ -71,9 +71,8 @@ public class ClientCnxnSocketNIO extends ClientCnxnSocket {
     	// create new file
     	try{
         	PrintWriter writer = new PrintWriter(ipcDir + "/new/rc-" + eventId, "UTF-8");
-        	writer.println("callbackName=" + "LeaderElectionCallback" + from);
-	        writer.println("sendNode=" + from);
-	        writer.println("recvNode=" + to);
+	        writer.println("sender=" + from);
+	        writer.println("recv=" + to);
 	        writer.close();
     	} catch (Exception e) {
         	LOG.error("[DEBUG] error in creating new file : " + eventId);
