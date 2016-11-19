@@ -263,15 +263,15 @@ public class Learner {
     	// create new file
     	try{
         	PrintWriter writer = new PrintWriter(ipcDir + "/new/sync-" + eventId, "UTF-8");
-	        writer.println("sender=" + (self.getId()-1));
-	        writer.println("recv=" + (leaderId-1));
-	        writer.println("leader=" + (leaderId-1));
+	        writer.println("sender=" + (self.getId()));
+	        writer.println("recv=" + (leaderId));
+	        writer.println("leader=" + (leaderId));
 	        writer.println("state=" + self.getPeerState().getValue());
 	        writer.println("strSendRole=" + self.getServerState());
 	        writer.println("zxid=" + qp.getZxid());
 	        writer.close();
     	} catch (Exception e) {
-        	LOG.error("[DEBUG] error in creating new file : " + eventId);
+        	LOG.error("[DEBUG] error in creating new file : sync-" + eventId);
     	}
     	
     	// move new file to send folder - commit message
@@ -283,15 +283,15 @@ public class Learner {
     	}
     	            	
     	// wait for dmck signal
-    	File ackFile = new File(ipcDir + "/ack/" + Long.toString(eventId));
+    	File ackFile = new File(ipcDir + "/ack/sync-" + Long.toString(eventId));
     	LOG.info("ack file : " + ackFile.getAbsolutePath());
-    	LOG.info("[DEBUG] start waiting for file : " + eventId);
+    	LOG.info("[DEBUG] start waiting for file : sync-" + eventId);
     	while(!ackFile.exists()){
     		// wait
     	}
     	
     	try{
-        	Runtime.getRuntime().exec("rm " + ipcDir + "/ack/" + eventId);
+        	Runtime.getRuntime().exec("rm " + ipcDir + "/ack/sync-" + eventId);
     	} catch (Exception e){
     		e.printStackTrace();
     	}

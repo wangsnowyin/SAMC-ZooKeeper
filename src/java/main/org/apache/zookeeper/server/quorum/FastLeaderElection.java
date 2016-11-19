@@ -480,17 +480,17 @@ public class FastLeaderElection implements Election {
             	// create new file
             	try{
     	        	PrintWriter writer = new PrintWriter(ipcDir + "/new/zk-" + eventId, "UTF-8");
-    		        writer.println("sender=" + (self.getId()-1));
-    		        writer.println("recv=" + (m.sid-1));
+    		        writer.println("sender=" + (self.getId()));
+    		        writer.println("recv=" + (m.sid));
     		        writer.println("state=" + m.state.getValue());
     		        writer.println("strSendRole=" + m.state);
-    		        writer.println("leader=" + (m.leader-1));
+    		        writer.println("leader=" + (m.leader));
     		        writer.println("zxid=" + m.zxid);
     		        writer.println("epoch=" + m.electionEpoch);
     		        writer.println("peerEpoch=" + m.peerEpoch);
     		        writer.close();
             	} catch (Exception e) {
-                	LOG.error("[DEBUG] error in creating new file : " + eventId);
+                	LOG.error("[DEBUG] error in creating new file : zk-" + eventId);
             	}
             	
             	// move new file to send folder - commit message
@@ -502,15 +502,15 @@ public class FastLeaderElection implements Election {
             	}
             	            	
             	// wait for dmck signal
-            	File ackFile = new File(ipcDir + "/ack/" + Long.toString(eventId));
+            	File ackFile = new File(ipcDir + "/ack/zk-" + Long.toString(eventId));
             	LOG.info("ack file : " + ackFile.getAbsolutePath());
-            	LOG.info("[DEBUG] start waiting for file : " + eventId);
+            	LOG.info("[DEBUG] start waiting for file : zk-" + eventId);
             	while(!ackFile.exists()){
             		// wait
             	}
-            	
+            	LOG.info("ack file zk-" + eventId + "received!");
             	try{
-                	Runtime.getRuntime().exec("rm " + ipcDir + "/ack/" + eventId);
+                	Runtime.getRuntime().exec("rm " + ipcDir + "/ack/zk-" + eventId);
             	} catch (Exception e){
             		e.printStackTrace();
             	}
@@ -874,13 +874,13 @@ public class FastLeaderElection implements Election {
 		// create new file
     	try{
         	PrintWriter writer = new PrintWriter(ipcDir + "/new/zkls-" + self.getId());
-	        writer.println("sender=" + (sender-1));
+	        writer.println("sender=" + (sender));
 	        writer.println("state=" + state.getValue());
 	        writer.println("strSendRole=" + state);
-	        writer.println("proposedLeader=" + (leader-1));
+	        writer.println("proposedLeader=" + (leader));
 	        writer.print("electionTable=");
 	        for (long node : recvset.keySet()){
-		        writer.print(node + ":" + (recvset.get(node).getId()-1) + ",");
+		        writer.print(node + ":" + (recvset.get(node).getId()) + ",");
 	        }
 	        writer.close();
 	        System.err.println("[updatetoDMCK] sendNode-" + sender + " sendRole-" + state + " leader-" + leader);
@@ -891,7 +891,7 @@ public class FastLeaderElection implements Election {
     	// move new file to send folder - commit message
     	try{
     		Runtime.getRuntime().exec("mv " + ipcDir + "/new/zkls-" + self.getId() + " " + 
-    				ipcDir + "/send/u-" + self.getId());
+    				ipcDir + "/send/zkls-" + self.getId());
     	} catch (Exception e){
         	LOG.error("[DEBUG] error in moving file to send folder : zkls-" + self.getId());
     	}

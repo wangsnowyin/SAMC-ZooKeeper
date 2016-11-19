@@ -1072,24 +1072,24 @@ public class QuorumPeer extends ZooKeeperThread implements QuorumStats.Provider 
     synchronized void updateStatetoDMCK(long leader, long sender, QuorumPeer.ServerState state){
 		// create new file
     	try{
-        	PrintWriter writer = new PrintWriter(ipcDir + "/new/u-" + sender);
-	        writer.println("sendNode=" + (sender-1));
-	        writer.println("sendRole=" + state.getValue());
+        	PrintWriter writer = new PrintWriter(ipcDir + "/new/zkls-" + sender);
+	        writer.println("sender=" + (sender));
+	        writer.println("state=" + state.getValue());
 	        writer.println("strSendRole=" + state);
-	        writer.println("leader=" + (leader-1));
+	        writer.println("proposedLeader=" + (leader));
 	        writer.print("electionTable=");
 	        writer.close();
 	        System.err.println("[updatetoDMCK] sendNode-" + sender + " sendRole-" + state + " leader-" + leader);
     	} catch (Exception e) {
-        	LOG.error("[DEBUG] error in creating new file : u-" + sender);
+        	LOG.error("[DEBUG] error in creating new file : zkls-" + sender);
     	}
     	
     	// move new file to send folder - commit message
     	try{
-    		Runtime.getRuntime().exec("mv " + ipcDir + "/new/u-" + sender + " " + 
-    				ipcDir + "/send/u-" + sender);
+    		Runtime.getRuntime().exec("mv " + ipcDir + "/new/zkls-" + sender + " " + 
+    				ipcDir + "/send/zkls-" + sender);
     	} catch (Exception e){
-        	LOG.error("[DEBUG] error in moving file to send folder : u-" + sender);
+        	LOG.error("[DEBUG] error in moving file to send folder : zkls-" + sender);
     	}
 	}
     
