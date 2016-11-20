@@ -75,7 +75,7 @@ public class ClientCnxnSocketNIO extends ClientCnxnSocket {
 	        writer.println("recv=" + to);
 	        writer.close();
     	} catch (Exception e) {
-        	LOG.error("[DEBUG] error in creating new file : " + eventId);
+        	LOG.error("[DEBUG] error in creating new file : rc-" + eventId);
     	}
     	
     	// move new file to send folder - commit message
@@ -87,15 +87,15 @@ public class ClientCnxnSocketNIO extends ClientCnxnSocket {
     	}
     	            	
     	// wait for dmck signal
-    	File ackFile = new File(ipcDir + "/ack/" + Long.toString(eventId));
+    	File ackFile = new File(ipcDir + "/ack/rc-" + Long.toString(eventId));
     	LOG.info("ack file : " + ackFile.getAbsolutePath());
-    	LOG.info("[DEBUG] start waiting for file : " + eventId);
+    	LOG.info("[DEBUG] start waiting for file : rc-" + eventId);
     	while(!ackFile.exists()){
     		// wait
     	}
     	
     	try{
-        	Runtime.getRuntime().exec("rm " + ipcDir + "/ack/" + eventId);
+        	Runtime.getRuntime().exec("rm " + ipcDir + "/ack/rc-" + eventId);
     	} catch (Exception e){
     		e.printStackTrace();
     	}

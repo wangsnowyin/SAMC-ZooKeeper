@@ -17,10 +17,10 @@ public class ReconfigTwo {
 	public static void main(String[] args){
 		try {
 			conn = new ZKConnection();
-		    zk = conn.connect("localhost:2281");
+		    zk = conn.connect("localhost:2180");
 		         
 		    List<String> joiningServers = new ArrayList<String>();  
-		    joiningServers.add("server.3=localhost:2893:3893:participant;2283");
+		    joiningServers.add("server.2=localhost:2892:3892:participant;2182");
 		    byte[] config = zk.reconfig(joiningServers, null, null, -1, new Stat());
 		       
 		    zk.close();
