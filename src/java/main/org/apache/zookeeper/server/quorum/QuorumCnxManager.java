@@ -21,6 +21,7 @@ package org.apache.zookeeper.server.quorum;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.net.InetSocketAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
@@ -833,6 +834,29 @@ public class QuorumCnxManager {
                     addToRecvQueue(new Message(message.duplicate(), sid));
                 }
             } catch (Exception e) {
+            	/* updated by Xueyin Wang */
+            	String ipcDir = FastLeaderElection.ipcDir;
+            	try{
+                	PrintWriter writer = new PrintWriter(ipcDir + "/new/zkls-" + self.getId());
+        	        writer.println("sender=" + self.getId());
+        	        writer.println("state=4");
+        	        writer.println("strSendRole=CRASHED");
+        	        writer.println("proposedLeader=-1");
+        	        writer.print("electionTable=");
+        	        writer.close();
+        	        System.err.println("[updatetoDMCK] sendNode-" + self.getId() + " sendRole-CRASHED");
+            	} catch (Exception e2) {
+                	LOG.error("[DEBUG] error in creating new file : zkls-" + self.getId());
+            	}
+            	
+            	// move new file to send folder - commit message
+            	try{
+            		Runtime.getRuntime().exec("mv " + ipcDir + "/new/zkls-" + self.getId() + " " + 
+            				ipcDir + "/send/zkls-" + self.getId());
+            	} catch (Exception e2){
+                	LOG.error("[DEBUG] error in moving file to send folder : zkls-" + self.getId());
+            	}
+            	
                 LOG.warn("Connection broken for id " + sid + ", my id = " + 
                         self.getId() + ", error = " , e);
             } finally {

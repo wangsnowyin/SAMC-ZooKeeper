@@ -65,7 +65,7 @@ public class ClientCnxnSocketNIO extends ClientCnxnSocket {
     }
     
     public void intercept(Packet p){
-    	long from = 0, to = 0;
+    	long from = 2, to = 0;
     	long eventId = FastLeaderElection.getHash(from, to);
     	
     	// create new file
